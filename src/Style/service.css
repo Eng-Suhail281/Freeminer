@@ -1,0 +1,149 @@
+.services {
+  margin: 5rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+.section__title {
+  margin: 4rem 0;
+}
+
+.flip-card {
+  background-color: transparent;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.AllCaedsService {
+  display: flex;
+  border: 2px solid #0577751c;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: 0px 2px 20px rgba(72, 86, 100, 0.1);
+  border-radius: 5px;
+  margin: 2rem 0;
+}
+
+.css-bhp9pd-MuiPaper-root-MuiCard-root {
+  width: 100% !important;
+  min-height: 600px;
+  justify-content: space-between;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: start;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
+
+.css-o69gx8-MuiCardMedia-root {
+  height: 270px;
+  border: none !important;
+
+}
+
+.flip-card:focus {
+  outline: 0;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+}
+
+.card_service_Home {
+  display: flex;
+  flex-direction: column;
+  background-color: #047083;
+}
+
+.reversee {
+  flex-direction: column-reverse !important;
+}
+
+.flip-card-front {
+  background: #fff !important;
+  color: black;
+  z-index: 2;
+  width: 100%;
+  align-items: start;
+  display: flex !important;
+  flex-direction: column !important;
+
+}
+
+.flip-card-back {
+  color: rgb(9, 5, 5) !important;
+  transform: rotateY(180deg);
+  font-size: 15px;
+
+  z-index: 1;
+  flex-wrap: wrap;
+  display: flex !important;
+
+}
+
+.details_name {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+  line-height: 2rem;
+  text-align: start;
+  cursor: pointer;
+
+}
+
+.name:hover {
+  color: #047083;
+}
+
+.details {
+  transition: all ease-in-out 0.3s;
+  text-align: start;
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+
+.name {
+  font-weight: 700;
+  margin: 1px 0 5px 0;
+  font-size: 22px;
+  line-height: 2;
+  transition: ease-in-out 0.3s;
+}
+
+.textService {
+  font-size: 14px;
+  font-family: Verdana, sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 14px;
+  margin: .6rem;
+  text-align: start;
+  line-height: 2rem;
+
+  cursor: pointer;
+  color: #0e150e;
+}
+
+.css-10ufb1t-MuiSlider-root.Mui-disabled {
+
+  color: #047083 !important;
+}

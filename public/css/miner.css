@@ -1,0 +1,255 @@
+   .slider-container {
+       width: 357px;
+       margin: auto;
+       overflow: hidden;
+       position: relative;
+       height: 140px;
+       display: flex;
+       align-items: center;
+   }
+
+   .slides {
+       display: flex;
+       transition: transform 0.5s ease-in-out;
+       width: 100%;
+   }
+
+   .slide {
+       min-width: 100%;
+       box-sizing: border-box;
+       text-align: center;
+   }
+
+   .slide img {
+       width: 180px;
+       height: 100px;
+       display: inline-block;
+   }
+
+   .controls {
+       position: absolute;
+       width: 100%;
+       display: flex;
+       justify-content: space-between;
+       top: 50%;
+       transform: translateY(-50%);
+       padding: 0 10px;
+   }
+
+   .btn {
+       background-color: #504e4e;
+       color: #fff;
+       border: none;
+       border-radius: 50%;
+       width: 30px;
+       height: 30px;
+       font-size: 20px;
+       cursor: pointer;
+   }
+
+
+   /* end slider style */
+
+
+   .TitleMinner {
+       line-height: 2.5;
+       font-size: 22px;
+   }
+
+   .start-btn {}
+
+
+   .hash-counter {
+       font-size: 24px;
+       margin: 0px 1.5rem 0 0;
+       font-weight: 800;
+       display: flex;
+       align-items: center;
+       text-align: center;
+       cursor: pointer;
+       width: 100%;
+       border-radius: 10px;
+   }
+
+   .BoxFirsthashes {
+       display: flex;
+       background: #1f1f1f45;
+       width: 100%;
+       align-items: center;
+       justify-content: space-between;
+       border-top-right-radius: 12px;
+       border-bottom-right-radius: 12px;
+
+   }
+
+   .timer-box {
+       background: #1f1f1f;
+       padding: 1rem;
+       /* padding: 1rem 1rem 0 1rem; */
+       border-radius: 15px;
+       box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+       text-align: center;
+   }
+
+   .timer {
+       font-size: 22px;
+       font-weight: bold;
+       letter-spacing: 2px;
+       line-height: 2;
+       margin-bottom: 15px;
+   }
+
+   .start-btn {
+       background-color: #00c3ff;
+       color: white;
+       font-weight: 600;
+       border: none;
+       padding: 10px 25px;
+       font-size: 1.4rem;
+       border-radius: 10px;
+       cursor: pointer;
+       transition: background-color 0.3s ease;
+   }
+
+   .start-btn:hover {
+       background-color: #0099cc;
+   }
+
+   .sendExchangehash {
+       background-color: #0d3c43 !important;
+       box-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+       width: 100% !important;
+       margin: 1rem 0;
+       height: 55px !important;
+       padding: .8rem;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+
+   .sendExchangehash:hover {
+       background-color: #02a5db !important;
+   }
+
+   .newJashes {
+       background-color: unset;
+       /* padding: .5rem; */
+       width: 98%;
+       margin: .5rem;
+       border-radius: 8px;
+   }
+
+   .exchange-section {
+       padding: 1rem;
+       width: 200px;
+   }
+
+   .Mined_Hashes {
+       padding: 1rem;
+       background: #504e4e;
+   }
+
+   .Current_balance {
+       padding: 1rem;
+       display: flex;
+       cursor: pointer;
+       height: 110px;
+       width: 150px;
+       font-size: 16px;
+       border-radius: 12px;
+       flex-direction: column;
+       align-items: center;
+       box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+       background: #1f1f1f45;
+       justify-content: space-evenly;
+   }
+
+   .ex_Change {
+       margin: .5rem;
+       width: 40px;
+       height: 40px;
+       font-weight: bolder;
+       box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+       background: #037384;
+   }
+
+   .minedHashe {
+       line-height: 2;
+       font-size: 16px;
+   }
+
+   .editBalance {
+       margin-right: .4rem;
+   }
+
+   /* .label {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #aaa;
+        } */
+
+
+   .power-box {
+       background: #111;
+       border-radius: 15px;
+       padding: 1rem;
+       width: 50%;
+       height: 110px;
+       width: 150px;
+       margin-right: .5rem;
+       cursor: pointer;
+
+
+
+   }
+
+   .Power_sale {
+       background: #037384;
+       border-radius: 12px;
+       height: 110px;
+       width: 150px;
+       cursor: pointer;
+
+       box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+
+       padding: .7rem;
+   }
+
+     .sendExchangehash {
+             line-height: none;
+       }
+   .unBoxFirsthashes {
+       background-color: unset;
+   }
+
+   @media (max-width: 344px) {
+
+       .BoxFirsthashes {
+           flex-direction: column;
+           width: 100%;
+           line-height: 3;
+       }
+
+       .Current_balance,
+       .timer-box {
+           width: 80%;
+           margin: 1rem auto;
+       }
+
+       .slider-container {
+           width: 270px
+       }
+
+       .power-box {
+           margin-top: 1rem;
+       }
+
+       .sendExchangehash {
+           height: 100px !important;
+        }
+        .Current_balance,.power-box,.Power_sale{
+height: 130px;
+        }
+
+
+   }

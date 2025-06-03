@@ -1,0 +1,137 @@
+ .footer {
+     background-color: #6c757d;
+     width: 100%;
+     padding: 1rem 0;
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: space-between;
+
+
+
+ }
+
+ .FooterAll {
+     background-color: #6c757d;
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: space-between;
+
+ }
+
+ .contentRight {
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+ }
+
+ .lang {
+     background-color: #047083 !important;
+     color: white !important;
+     text-decoration: none !important;
+     border-radius: none !important;
+ }
+
+ .textFooter {
+     color: #fff;
+     max-width: 600px;
+     display: flex;
+     font-size: 15px;
+     text-wrap: wrap;
+ }
+
+ .logoFooter {
+     width: 100px;
+     height: 85px;
+ }
+
+ .footerIcons {
+     display: flex;
+     flex-direction: row-reverse;
+
+ }
+
+ .ciurcel {
+     color: #fff;
+     background-color: rgb(255, 255, 255, .1);
+     align-items: center;
+     justify-content: center;
+     display: flex;
+     border-radius: 4px;
+     text-align: center;
+     width: 36px;
+     font-size: 20px;
+     height: 36px;
+     margin: .5rem;
+ }
+
+ .AllContent {
+     display: flex;
+     align-items: center;
+ }
+
+ .ciurcel:hover {
+     background-color: #047083;
+ }
+
+ .btnShare {
+     color: #fff !important;
+     margin: .3rem !important;
+     padding: .5rem !important;
+
+ }
+
+ .btnContact {
+     background-color: #0d6efd !important;
+ }
+
+ .btn_Servise {
+     background-color: #6c757d !important;
+
+ }
+
+ /*  */
+
+ .logoContact {
+     width: 150px;
+     height: 70px;
+     margin: 1rem 0 1rem 0;
+ }
+
+ /* start footer style */
+ .Footers {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .contentFooter {
+     display: flex;
+     align-items: center;
+     width: 100%;
+     padding: 1.5rem 0 1.5rem 0;
+     justify-content: space-between;
+ }
+
+ .imagFooter {
+     width: 70px;
+ }
+
+ .right {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+ }
+
+ .Privacy {
+     color: #878f97 !important;
+ }
+
+ .textImage {
+     color: #878f97 !important;
+     margin: 0 .5rem 0 .5rem !important;
+
+ }

@@ -3,69 +3,92 @@
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/deposit.css') }}">
 @endpush
-
 @section('content')
-    <div class="container">
 
-        <!-- Power Sale Section -->
-        <div class="power-sale">
-            <h2>Power Sale</h2>
-            <p>Purchase from $ 25: BONUS +25%</p>
-            <p>Purchase from $ 100: BONUS +50%</p>
-            <p>Purchase from $ 500: BONUS +75%</p>
-            <p>Purchase from $ 2000: BONUS +100%</p>
-            <p class="time-left">TIME LEFT: 84 h. 59 min. 54 sec.</p>
+<div class="disposite_content">
+<div class="cardfirst">
+    <div class="some_text">
+    <span class="PowerText"> Power Shop
+    </span>
+   <p class="sub_texxt">Enter the sum you want to use for buying mining power:</p>
+    </div>
+                <form id="depositForm" action="{{ route('deposit.handlePay') }}" method="POST">
+    @csrf
+    <div class="some_texts">
+        <input class="number_usd"  type="number" id="amount" name="amount" placeholder="USD" required/>
+<label for="amount" class="usd">USD</label>
+    </div>
+
+</div>
+ <div class="Power_Sale">
+ <h2>Power Sale</h2>
+ <div class="power-sale">
+             <div class="detalis_power"> <p >Purchase from $ 25:</p><p>   BONUS +25%</p> </div>
+            <div class="detalis_power"> <p>Purchase from $ 25:</p><p>   BONUS +25%</p> </div>
+            <div class="detalis_power"> <p>Purchase from $ 25:</p><p>   BONUS +25%</p> </div>
+            <hr class="hr" />
+            <div class="detalis_power"> <p>Purchase from $ 25:</p><p>   BONUS +25%</p> </div>
+            <div class="detalis_power"> <p>Purchase from $ 25:</p><p>   BONUS +25%</p> </div>
+
+             <p class="time-left">TIME LEFT: 84 h. 59 min. 54 sec.</p>
         </div>
+        </div>
+         <div class="Power_Sale Shpos" id="powerCalculator">
+ <h2>Power Shop</h2>
+ <div class="power-sale">
+             <div class="detalis_power"> <p >Power: </p><p id="power"> GPU</p> </div>
+             <div class="detalis_power"> <p>BONUS for action:
+                </p><p id="bonusText">    GPU</p> </div>
+             <div class="detalis_power"> <p>Total power:
+            </p><p id="totalPower">    GPU</p> </div>
+            <hr class="hr" />
 
-        <!-- Power Shop Section -->
-        <div class="power-shop">
-            <h3>Power Shop</h3>
-            <form id="depositForm" method="GET">
-                <label for="amount">Enter the amount (USD):</label>
-                <input type="number" id="amount" name="amount" placeholder="USD" required>
+            <div class="detalis_power"> <p>Interest rate:
+            </p><p>   1.92% Profit per day</p> </div>
+             <div class="detalis_power"> <p>Profit per day:
+            </p><p id="profitDay"> Hash</p> </div>
+            <hr class="hr" />
 
-                <!-- Power Calculator -->
-                <div id="powerCalculator" class="power-calculator">
-                    <h5>PROFIT CALCULATOR</h5>
-                    <p>Power: <span id="power">0</span> GPU</p>
-                    <p id="bonusText" class="bonus-text" style="display:none;">+25% Bonus: <span id="bonus">0</span> GPU</p>
-                    <p>Total power: <span id="totalPower">0</span> GPU</p>
-                    <hr>
-                    <p>Interest rate: 1.92% Profit per day</p>
-                    <p>Profit per day: <span id="profitDay">0</span> Hash</p>
-                    <p>Profit per month: <span id="profitMonth">0</span> Hash</p>
-                    <p>Profit over 6 months: <span id="profit6Month">0</span> Hash</p>
-                </div>
+              <div class="detalis_power"> <p>Profit per month:
+            </p><p id="profitMonth">    Hash</p> </div>
+            <div class="detalis_power"> <p>Profit over 6 months:  </p><p id="profit6Month"> Hash</p>
+         </div>
+<br />
+   <p class="ChoosePay">Choose Payment Method  </p>
 
-                <!-- اختيار طريقة الدفع -->
-                <label for="method">Select Payment Method:</label>
+                 <div class="detalis_power">
+                 <label for="method">Select Payment Method:</label>
+                 <p>
                 <select id="method" name="method" required>
-                    <option value="">-- Choose Method --</option>
-                    <option value="tron">TRON</option>
+                    <option value="">Choose Method</option>
+                    <option value="usdt">USDT (TRC20)</option>
+                    <option value="tron">TRON(TRX)</option>
                     <option value="bnb">BNB</option>
                     <option value="ton">TON Coin</option>
                     <option value="litecoin">Litecoin</option>
-                </select>
-
-                <!-- Telegram ID -->
+                </select></p>
+</div>
+<br />
+           <!-- Telegram ID -->
                 <input type="hidden" id="telegram_id" name="telegram_id" value="{{ $telegramId }}">
-
-                <button type="submit" class="pay-button">Pay</button>
-            </form>
+            <button type="submit" class="Send_button">Pay</button>
+            </div>
         </div>
+                    </form>
+        <!-- <div class="some_texts machine" >
+            <p>Next mining machine:  </p>
+            <p>To unlock: 249 900 GPU</p>
+            <button class="unlock-button" type="submit" >UNLOCK</button>
+        </div> -->
 
-        <!-- Next Mining Machine Section -->
-        <div class="next-mining-machine">
-            <p>Next mining machine: To unlock: 249 900 GPU</p>
-            <button class="unlock-button">UNLOCK</button>
-        </div>
+        <!-- Power Shop Section -->
 
-        <!-- Footer Info -->
-        <div class="footer-info">
-            <p>@MineFast_bot</p>
-        </div>
+         </div>
+
 
     </div>
+    </div>
+
 @endsection
 
 @push('scripts')
@@ -73,32 +96,28 @@
     // هل هذا أول إيداع؟ (مؤقتًا = true، لاحقًا نرسله من السيرفر)
     const isFirstDeposit = true;
 
-    function updateCalculator() {
-        const amountInput = document.getElementById('amount');
-        const power = document.getElementById('power');
-        const bonus = document.getElementById('bonus');
-        const totalPower = document.getElementById('totalPower');
-        const bonusText = document.getElementById('bonusText');
-        const profitDay = document.getElementById('profitDay');
-        const profitMonth = document.getElementById('profitMonth');
-        const profit6Month = document.getElementById('profit6Month');
+function updateCalculator() {
+    const amountInput = document.getElementById('amount');
+    const power = document.getElementById('power');
+    const bonus = document.getElementById('bonusText'); // fixed
+    const totalPower = document.getElementById('totalPower');
+    const profitDay = document.getElementById('profitDay');
+    const profitMonth = document.getElementById('profitMonth');
+    const profit6Month = document.getElementById('profit6Month');
 
-        const amount = parseFloat(amountInput.value) || 0;
-        const basePower = amount * 10000;
-        const bonusPower = isFirstDeposit ? basePower * 0.25 : 0;
-        const total = basePower + bonusPower;
-        const dailyProfit = total * 0.0192;
+    const amount = parseFloat(amountInput.value) || 0;
+    const basePower = amount * 10000;
+    const bonusPower = isFirstDeposit ? basePower * 0.25 : 0;
+    const total = basePower + bonusPower;
+    const dailyProfit = total * 0.0192;
 
-        power.textContent = basePower.toLocaleString();
-        bonus.textContent = bonusPower.toLocaleString();
-        totalPower.textContent = total.toLocaleString();
-
-        profitDay.textContent = Math.floor(dailyProfit).toLocaleString();
-        profitMonth.textContent = Math.floor(dailyProfit * 30).toLocaleString();
-        profit6Month.textContent = Math.floor(dailyProfit * 180).toLocaleString();
-
-        bonusText.style.display = isFirstDeposit ? 'block' : 'none';
-    }
+    power.textContent = basePower.toLocaleString();
+    bonus.textContent = bonusPower.toLocaleString();
+    totalPower.textContent = total.toLocaleString();
+    profitDay.textContent = Math.floor(dailyProfit).toLocaleString();
+    profitMonth.textContent = Math.floor(dailyProfit * 30).toLocaleString();
+    profit6Month.textContent = Math.floor(dailyProfit * 180).toLocaleString();
+}
 
     document.getElementById('amount').addEventListener('input', updateCalculator);
     document.addEventListener('DOMContentLoaded', updateCalculator);
@@ -115,8 +134,9 @@
             return;
         }
 
-        const url = `/deposit/form/${method}?amount=${amount}&telegram_id=${telegramId}`;
+         const url = `/deposit/form/${method}?amount=${amount}&telegram_id=${telegramId}`;
         window.location.href = url;
     });
 </script>
 @endpush
+

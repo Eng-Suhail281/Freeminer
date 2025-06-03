@@ -1,0 +1,208 @@
+.promoCode {
+    min-height: 80vh;
+    width: 80%;
+    margin: 3rem auto;
+
+}
+
+.levelPromo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.create_code {
+    color: red;
+    background: rgba(255, 0, 0, 0.129);
+    border: 1px solid red;
+    border-radius: 12px;
+    padding: .5rem;
+}
+
+.create_code:hover {
+    color: white;
+    background: red;
+}
+
+.all_boxProwCode {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.boxProwCode {
+    width: 98%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background: #03738434;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px #037384;
+}
+
+.card_title {
+    padding: 1rem;
+    font-size: 22px;
+    border-radius: 10px;
+    background: #037384;
+    color: white;
+    margin-bottom: .5rem;
+}
+
+.details_promo {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    direction: rtl;
+    text-align: start;
+    font-size: 18px;
+    color: white;
+    margin: 1rem auto;
+    font-weight: bold;
+
+}
+
+.infoDetails {
+    line-height: 3;
+}
+
+.flex-item {
+    display: flex;
+    align-items: center;
+}
+
+.buttons_promo {
+    border-radius: 12px;
+    padding: .5rem;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.copy_links {
+    width: 90%;
+    margin: auto;
+}
+
+.edits {
+    color: orange;
+    background: rgba(255, 166, 0, 0.315);
+}
+
+.edits:hover {
+    background: orange;
+    color: wheat;
+}
+
+.destroyPromo:hover {
+    background: red;
+    color: wheat;
+}
+
+.destroyPromo {
+    color: red;
+    margin-left: .5rem;
+    background: rgba(255, 0, 0, 0.364);
+
+
+}
+
+.copy_promo {
+    margin-left: .5rem;
+    padding: .6rem;
+}
+
+.copy_promo:hover {
+    background: rgba(59, 130, 246, 0.5);
+    color: white;
+}
+
+.form_control {
+    padding: 1rem;
+    width: auto;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 82%;
+}
+
+/* style create */
+.create_codess {
+    height: 650px;
+    margin-top: 2rem;
+    overflow-y: scroll;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    scrollbar-color: rgb(109 158 192) rgb(24, 22, 22);
+    width: 100%;
+}
+
+.create_codes {
+    width: 80%;
+    padding: 1rem 0 0 0;
+    margin-bottom: 3rem;
+
+
+}
+
+.form_createPromo {
+    border-radius: 5px;
+    padding: .7rem;
+    outline: none;
+    width: 60%;
+    border: none;
+}
+
+.textPromo {
+    height: 80px;
+}
+
+/* edit promo */
+.saveChanges {
+    background: #00c3ff;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+    width: 90%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back {
+    background: #ff003c;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit_Promo {
+    padding: 2rem 0;
+}
+
+@media (max-width: 484px) {
+    .promoCode {
+        width: 98%;
+        flex-wrap: wrap;
+    }
+
+    .levelPromo {
+        flex-wrap: wrap;
+
+    }
+
+}

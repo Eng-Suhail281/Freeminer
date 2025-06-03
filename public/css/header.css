@@ -4,14 +4,20 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #121212;
     color: white;
 }
 
+a.menu-icon {
+    background-color: transparent;
+}
+
 .top-bar {
-    background-color: black;
+    background-color: rgba(61, 59, 59, 0.853);
+    width: 100%;
     padding: 10px 20px;
 }
 
@@ -26,24 +32,47 @@ body {
     font-size: 24px;
 }
 
+.language-flag {
+    align-items: center;
+    display: flex;
+}
+
 .language-flag .flag-img {
     width: 30px;
-    height: 20px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 .5rem;
 }
 
 .deposit-btn {
-    background-color: orange;
+    background-color: #037384;
     border: none;
     color: white;
-    padding: 8px 20px;
-    font-size: 14px;
+    margin: 0 1rem;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 4px;
+}
+
+.content_Profiles {
+    display: flex;
+    align-items: center;
+
 }
 
 .balance-profile {
     display: flex;
     align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    flex-direction: column;
+
+}
+
+.person {
+    font-size: 33px;
 }
 
 .balance-text {
@@ -67,7 +96,7 @@ body {
     position: absolute;
     background-color: #ffffff;
     min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     right: 0;
     top: 100%;
@@ -82,4 +111,167 @@ body {
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+
+/* @media (min-width: 301px) and (max-width: 601px) {
+
+    .top-bar-content,
+    .BONUS_CARD,
+    .detailBlock {
+        display: block;
+    }
+
+    .bottom-nav {
+        flex-wrap: wrap;
+    }
+
+    .form_input_Search {
+        margin: 1rem 0;
+    }
+
+    .Select_search_input {
+        padding: .7rem;
+    }
+
+    .back_min_miner {
+        height: unset;
+    }
+
+    body {
+        background-color: red !important;
+    }
+} */
+
+@media (min-width: 407px) and (max-width: 627px) {
+    .form_input_Search {
+        margin: 1rem 0;
+    }
+
+    .bottom-nav {
+        flex-wrap: wrap;
+    }
+
+    /* body {
+        background-color: rgb(0, 255, 102) !important;
+    } */
+
+    .dropdown {
+        display: flex;
+    }
+
+    .top-bar,
+    .dropdown {
+        padding: 10px 0;
+    }
+
+    .content_Profiles,
+    .language-flag {
+        justify-content: space-between;
+    }
+
+    .Select_search_input,
+    .btn_search_input {
+        margin: .5rem .3rem;
+        width: 155px;
+    }
+
+    .search_input {
+        width: 320px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 407px) {
+    .form_input_Search {
+        margin: 1rem 0;
+    }
+
+    .bottom-nav {
+        flex-wrap: wrap;
+    }
+
+    .levels {
+        margin: 0;
+    }
+
+    .earn_copy {
+        margin-top: .4rem;
+    }
+
+    .referral-link {
+        flex-wrap: wrap;
+    }
+
+    .profile-commission {
+        margin-bottom: 5rem;
+    }
+
+    body {
+        /* background-color: rgb(251, 255, 0) !important; */
+    }
+
+    .dropdown {
+        display: flex;
+    }
+
+    .top-bar,
+    .dropdown {
+        padding: 10px 0;
+    }
+
+    .content_Profiles,
+    .language-flag {
+        justify-content: space-between;
+    }
+
+    .Select_search_input,
+    .btn_search_input {
+        margin: .5rem .3rem;
+        width: 155px;
+    }
+
+    .search_input {
+        width: 180px;
+        max-width: fit-content;
+    }
+
+    .back_min_miner {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (max-width: 324px) {
+
+    .person,
+    .flag-img,
+    .bal_nce {
+        display: none;
+    }
+
+    .search_input {
+        padding: .5rem;
+    }
+
+    .form_input_Search {
+        margin-top: 1rem;
+    }
+
+    /* body {
+        background-color: bisque;
+    } */
+}
+
+@media (min-width: 628px) and (max-width: 800px) {
+
+    .form_input_Search {
+        display: flex;
+    }
+
+    .flex_item {
+        flex-wrap: nowrap;
+    }
+
+    /* body {
+        background-color: rgb(0, 200, 255) !important;
+    } */
 }

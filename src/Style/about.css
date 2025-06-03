@@ -1,0 +1,66 @@
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+    justify-content: space-between;
+}
+
+.LogoImage {
+    width: 700px;
+    margin-left: auto;
+    margin-top: 2rem;
+}
+
+.textTab {
+    text-align: start;
+}
+
+.borderAbout {
+    border: 3px solid #047083;
+    width: 250px;
+    border-radius: 22px;
+}
+
+.BoxShare {
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0px 2px 15px #0000001a;
+    padding: 2rem;
+    align-items: center;
+    text-wrap: wrap;
+}
+
+.objective {
+    margin: 1rem 0;
+    text-wrap: wrap;
+    border-left: 12px solid #e64a64;
+}
+
+.vesion {
+    margin: 2rem 0;
+    border-left: 12px solid #0ea2bd;
+    text-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+.Mission {
+    margin: 2rem 0;
+    border-left: 12px solid #ffc107;
+    text-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ulTab {
+    text-align: start;
+    margin-top: 1rem;
+    list-style: disc;
+    text-wrap: wrap;
+}
+
+.ulTab .li {
+    font-size: 15px;
+ }

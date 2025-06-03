@@ -1,0 +1,60 @@
+.Header {
+    position: sticky;
+    background-color: #ffffff;
+    width: 100%;
+     top: 0;
+    z-index: 99;
+    box-shadow: 0px 2px 20px rgba(72, 86, 100, 0.1);
+}
+
+.header {
+    margin: 0 1rem 0 1rem;
+
+}
+
+.logo {
+    width: 80px;
+    height: 75px;
+}
+
+.header .nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 5px;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    justify-content: center;
+    width: 100% !important;
+}
+
+
+.nav-item {
+    color: #8B8A8A !important;
+    font-size: 17px;
+    text-decoration: none !important;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 0 1.4rem 0 1.4rem;
+}
+
+.lang {
+    background-color: green !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: none !important;
+}
+.selected {
+    color: #0ea2bd !important;
+    font-weight: bold;
+
+ }
+.Switch{
+    display: flex !important;
+    align-items: center;
+}
+.lan__g{
+    color: #9c27b0;
+    font-weight: 600;
+    font-size: 17px;
+}

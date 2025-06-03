@@ -11,43 +11,65 @@
 
     <div class="top-bar">
         <div class="top-bar-content">
-            <!-- Menu Icon -->
-            <div class="menu-icon">
-                <i class="fas fa-bars"></i>
-            </div>
+             <div class="dropdown">
+             <div class="language-flag">
 
-            <!-- Dropdown Menu Trigger -->
-<div class="dropdown">
-    <button class="menu-icon">
-        <i class="fas fa-bars"></i>
-    </button>
-    <div class="dropdown-menu">
-        <a href="{{ route('support.index') }}">Support</a>
-        <a href="{{ route('user.transactions') }}">Transaction History</a>
-    </div>
-</div>
+    <a class="menu-icon">
+    <i class="bi bi-list"></i>
+    </a>
 
             <!-- Language Flag -->
             <div class="language-flag">
-                <img src="{{ asset('images/uk_flag.png') }}" alt="English" class="flag-img">
+                <img src="{{('asset/flag.png')}}" alt="English" class="flag-img">
+                <span>English</span>
             </div>
-            <!-- Deposit Button -->
-            <form action="{{ route('deposit.deposit') }}" method="GET" style="display: inline;">
-            <button type="submit" class="deposit-btn">Deposit</button>
-            </form>
+            </div>
 
-            
+    <div class="dropdown-menu">
+    <a href="{{'/faq'}}">FAQ</a>
+
+        <a href="{{ route('support.index') }}">Support</a>
+        <a href="{{ route('user.transactions') }}">Transaction History</a>
+
+
+        FAQ
+    </div>
+</div>
+            <!-- <div class="menu-icon">
+            <i class="bi bi-list"></i>
+                 <i class="fas fa-bars"></i>
+            </div> -->
+
+            <!-- Dropdown Menu Trigger -->
+
+
+
+
+
             @php
     // إذا $user غير معرف أو فارغ، استعلم عن User::find(1)
     $user = $user ?? \App\Models\User::find(1);
 @endphp
             <!-- Balance & Profile -->
-            <div class="balance-profile">
-            <span class="balance-text">Balance {{ number_format($user->balance, 2) }} FMT</span>
-                <img src="{{ asset('images/profile_pic.png') }}" alt="Profile" class="profile-img">
+             <div class="content_Profiles">
+                    <!-- Deposit Button -->
+            <form action="{{ route('deposit.deposit') }}" method="GET" style="display: inline;">
+            <button type="submit" class="deposit-btn">Deposit</button>
+            </form>
+             <div class="balance-profile">
+             <span class="bal_nce">Balance</span>
+
+             <span class="balance-text"> {{ number_format($user->balance, 2) }} FMT</span>
+              <!-- <img src="{{ asset('images/profile_pic.png') }}" alt="Profile" class="profile-img"> -->
             </div>
+<i class="bi bi-person-square person"></i>
+
+            </div>
+
         </div>
     </div>
+    </div>
+
 
     <!-- Add your page content here -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>

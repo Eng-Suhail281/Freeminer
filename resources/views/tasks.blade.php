@@ -1,128 +1,147 @@
 @extends('layouts.app')
 
 @push('styles')
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1e1e1e;
-            color: white;
-        }
-        .header {
-            background-color: #2d3b47;
-            padding: 20px;
-            text-align: center;
-        }
-        .header h1 {
-            font-size: 24px;
-            margin: 0;
-        }
-        .main-content {
-            padding: 20px;
-            text-align: center;
-        }
-        .main-content h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .tasks {
-            margin-bottom: 40px;
-        }
-        .task {
-            background-color: #333;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .task p {
-            margin: 0;
-        }
-        .task .task-icon {
-            width: 40px;
-            height: 40px;
-        }
-        .task .progress-bar {
-            flex-grow: 1;
-            height: 8px;
-            background-color: #444;
-            border-radius: 10px;
-            margin-left: 10px;
-        }
-        .task .progress-bar span {
-            display: block;
-            height: 100%;
-            background-color: #ff6a00;
-        }
-        .footer {
-            background-color: #1a1a1a;
-            padding: 20px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            display: flex;
-            justify-content: space-around;
-        }
-        .footer div {
-            text-align: center;
-            color: #aaa;
-        }
-        .footer .active {
-            color: #ff6a00;
-        }
-    </style>
-@endpush
+<link rel="stylesheet" href="{{ asset('css/index.css') }}"></link>
 
+  @endpush
 @section('content')
-    <div class="header">
-        <h1>Complete Tasks to earn more</h1>
-    </div>
-
-    <div class="main-content">
-        <h2>FRIENDS</h2>
-
+<div class="content_invites">
+         <h1 class="content_invite_h2">Complete Tasks to earn more</h1>
+     <div class="main-content">
+        <h2 class="content_h2">FRIENDS</h2>
         <div class="tasks">
-            <div class="task">
-                <img class="task-icon" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_Logo.svg" alt="Telegram">
-                <div>
-                    <p>Invite 1 friend</p>
-                    <span>Reward: 200 GPU</span>
+        <div class="task_card">
+                <img class="telg" src="{{('asset/tel.jpg')}}" alt="Telegram">
+                <div class="text_task">
+                    <p class="textInvite"> Invite 3 friends</p>
+                    <p class="reward">Reward: 450 GPU</p>
                 </div>
-                <div class="progress-bar">
-                    <span style="width: 14%;"></span>
+                <div class="progress_content">
+                    <progress class="progress" id="file" value="52" max="100"> 32% </progress>
+                     <label class="count_number" for="file">   0/3 </label>
+                 </div>
+             </div>
+             <div class="task_card">
+                <img class="telg" src="{{('asset/tel.jpg')}}" alt="Telegram">
+                <div class="text_task">
+                    <p class="textInvite"> Invite 3 friends</p>
+                    <p class="reward">Reward: 450 GPU</p>
                 </div>
-                <p>0/1</p>
+                <div class="progress_content">
+                    <progress class="progress" id="file" value="52" max="100"> 32% </progress>
+                     <label class="count_number" for="file">   0/3 </label>
+                 </div>
+             </div>
+             <div class="task_card">
+                <img class="telg" src="{{('asset/tel.jpg')}}" alt="Telegram">
+                <div class="text_task">
+                    <p class="textInvite"> Invite 3 friends</p>
+                    <p class="reward">Reward: 450 GPU</p>
+                </div>
+
+                <div class="progress_content">
+                    <progress class="progress" id="file" value="52" max="100"> 32% </progress>
+                     <label class="count_number" for="file">   0/3 </label>
+                 </div>
+             </div>
+
             </div>
 
-            <div class="task">
-                <img class="task-icon" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_Logo.svg" alt="Telegram">
-                <div>
-                    <p>Invite 3 friends</p>
-                    <span>Reward: 450 GPU</span>
-                </div>
-                <div class="progress-bar">
-                    <span style="width: 43%;"></span>
-                </div>
-                <p>0/3</p>
-            </div>
-
-            <div class="task">
-                <img class="task-icon" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_Logo.svg" alt="Telegram">
-                <div>
-                    <p>Invite 7 friends</p>
-                    <span>Reward: 1000 GPU</span>
-                </div>
-                <div class="progress-bar">
-                    <span style="width: 0%;"></span>
-                </div>
-                <p>0/7</p>
-            </div>
         </div>
-    </div>
 
-    <!-- Bottom Navigation -->
-    @include('layouts.footer')
+        <div class="AllBONUS_CARD">
+        <h2 class="content_h2">TOP UP BONUS</h2>
+<div class="BONUS_CARD">
+    <div class="dis_Boun">
+    <img src="{{('asset/flag.png')}}" alt="English" class="flag-img">
+    <div class="text_tasks">
+                    <span class="textInvites"> Yop Up Balance : $5</span>
+                    <p class="rewards">Reward: 45000 GPU</p>
+                </div>
+    </div>
+  <p class="numTasks">0/3</p>
+
+</div>
+<div class="BONUS_CARD">
+    <div class="dis_Boun">
+    <img src="{{('asset/flag.png')}}" alt="English" class="flag-img">
+    <div class="text_tasks">
+                    <span class="textInvites"> Yop Up Balance : $5</span>
+                    <p class="rewards">Reward: 45000 GPU</p>
+                </div>
+    </div>
+  <p class="numTasks">0/3</p>
+
+</div>
+        </div>
+        <div class="AllBONUS_CARD">
+        <h2 class="content_h2">FOLLOW US</h2>
+<div class="BONUS_CARD Follow">
+    <div class="dis_Boun">
+    <img src="{{('asset/flag.png')}}" alt="English" class="flag-img">
+    <div class="text_tasks">
+                    <span class="textInvites"> Follow Our News channel</span>
+                    <p class="rewards">Reward: 45000 GPU</p>
+                </div>
+    </div>
+    <div class="all_button">
+    <a href="tg://resolve?domain=yourusername">
+    <button class="Open" target="_blank" >Open</button>
+    </a>
+
+         <button class="Check" onclick="document.getElementById('id01').style.display='block'">Check</button>
+     </div>
+</div>
+<div class="BONUS_CARD Follow">
+    <div class="dis_Boun">
+     <img src="{{('asset/flag.png')}}" alt="English" class="flag-img">
+
+    <div class="text_tasks">
+                    <span class="textInvites"> Follow Our News channel</span>
+                    <p class="rewards">Reward: 45000 GPU</p>
+                </div>
+    </div>
+    <div class="all_button">
+        <button class="Open" >Open</button>
+        <button class="Check" >Check</button>
+     </div>
+</div>
+  </div>
+<div class="AllBONUS_CARD">
+        <h2 class="content_h2">OTHER</h2>
+<div class="BONUS_CARD Follow">
+    <div class="dis_Boun">
+    <img src="{{('asset/flag.png')}}" alt="English" class="flag-img">
+    <div class="text_tasks">
+                    <span class="textInvites"> Follow Our News channel</span>
+                    <p class="rewards">Reward: 45000 GPU</p>
+                </div>
+    </div>
+    <div class="all_button">
+        <button class="Open">Open</button>
+        <button class="Check">Check</button>
+
+     </div>
+
+</div>
+</div>
+
+
+        </div>
+</div>
+        </div>
+ <div id="id01" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+      <p>App Miner Faster</p>
+      <p>Task Not Completed</p>
+    </div>
+    <button class="deposit-btn OKButton" onclick="document.getElementById('id01').style.display='none'" >OK</button>
+
+  </div>
+</div>
+        </div>
+
+
 @endsection

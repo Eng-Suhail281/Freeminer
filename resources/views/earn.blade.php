@@ -5,52 +5,70 @@
 @endpush
 
 @section('content')
-    <div class="container">
+    <div class="content_invite">
         <div class="card">
             <h1>Invite friends!</h1>
-            <p>You and your friend will get bonuses</p>
-
+            <p class="text_small">You and your friend will get bonuses</p>
             <div class="referral-link">
-                <input type="text" id="referral-link" value="{{ $referral_link }}" readonly>
+                <div class="shearLinks">
+                    <input type="text" id="referral-link" value="{{ $referral_link }}" class="input_invite" readonly>
+                    <button class="share-btn" onclick="">Shear Link</button>
+                </div>
+
                 <button class="share-btn" onclick="copyReferralLink()">Copy link</button>
             </div>
-
-            <div class="money-info">
+            <div class="all_earn_count">
+             <div class="money-info">
                 <h2>Money for friends!</h2>
                 <p>You will receive +200 GPU to your power for each user who comes through your unique link.</p>
                 <p>Get 2,500 GPU for your friend's first deposit of any amount!</p>
                 <p>You’ll receive an additional percentage of commissions from any spending made by the user on the project.</p>
                 <button class="more-rewards-btn">More about rewards</button>
             </div>
-
             <div class="levels">
-                <div class="level">
-                    <span>Level 1</span>
-                    <span>{{ $level1Count }} users</span> <!-- عرض عدد المستخدمين الذين جاءوا من خلال الرابط -->
+                <div class="ll">
+
+                 <div class="level">
+                    <span class="level_number">Level 1</span>
+                    <span class="numberLevels">  {{ $level1Count }} </span> <!-- عرض عدد المستخدمين الذين جاءوا من خلال الرابط -->
                 </div>
                 <div class="level">
-                    <span>Level 2</span>
-                    <span>{{ $level2Count }} users</span>
+                    <span class="level_number">Level 2</span>
+                    <span class="numberLevels">  {{ $level2Count }} </span>
+                </div>
+
                 </div>
                 <div class="level">
-                    <span>Level 3</span>
-                    <span>{{ $level3Count }} users</span>
+                    <span class="level_number">Level 3</span>
+                    <span class="numberLevels">  {{ $level3Count }}  </span>
                 </div>
+                <div class="profile-commission">
+                <div class="">
+ <p class="sub_title_Page"> Your referrals of  level 1
+ </p>
+</div>
+       <div class="commission">
+       <div class="profile">
+                    <span class="Commission_name">Commission :</span>
+                    <span class="Commission_number">{{ number_format($commission) }}</span>
+                    </div>
+                    <div class="profile">
+                    <span class="Commission_name"> Profile :</span>
+                    <span class="Commission_number">{{ number_format($commission) }}</span>
+                    </div>
+
+                </div>
+
+<p>                You have no referrals of level 1
+</p>
+</div>
+
+            </div>
+            </div>
             </div>
 
-            <div class="profile-commission">
-                <div class="profile">
-                    <span>Your referrals of 1 level:</span>
-                    <span>{{ $level1Count }} referrals</span>
-                </div>
-                <div class="commission">
-                    <span>Commission:</span>
-                    <span>{{ number_format($commission) }}</span>
-                </div>
-            </div>
 
-            <!-- Bottom Navigation -->
-            @include('layouts.footer')
+
         </div>
     </div>
 @endsection

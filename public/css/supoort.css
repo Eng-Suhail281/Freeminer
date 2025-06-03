@@ -1,0 +1,119 @@
+.allcardSupports {
+    width: 100%;
+    display: flex;
+    padding-top: 1rem;
+     margin: auto;
+    min-height: 75vh;
+    flex-direction: column;
+}
+
+.cardSupports {
+    display: flex;
+    background-color: rgb(191 209 245 / 15%);
+    margin: 1rem auto;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 22px;
+    padding: .2rem .4rem;
+    border-left: 12px solid #0eb5cf;
+    width: 100%;
+
+}
+
+.allA {
+    background: unset !important;
+    border-left: unset !important;
+
+}
+
+.textMessg {
+    font-size: 18px;
+}
+
+.btn_support {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    margin: 2rem 0;
+    overflow: auto;
+    scrollbar-color: rgb(109 158 192) rgb(24, 22, 22);
+}
+
+.addMessgeSupport {
+    padding: 1rem;
+    width: 180px;
+    background: #037384;
+    color: white;
+    font-size: 20px;
+    margin: 2rem 0 0 0;
+    border-radius: 22px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 2px 3px rgba(237, 235, 235, 0.937);
+
+}
+
+.badges {
+    padding: 1rem;
+    border-radius: 22px;
+    display: flex;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+    background-color: #037384;
+}
+
+#id01 {
+    display: none;
+}
+
+/* start show */
+.allmessfes {
+    background: rgb(178 181 184 / 9%);
+    padding: 0 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    width: 90%;
+    margin: auto;
+
+
+}
+
+.allmessfes h1 {
+    margin: 2rem 0;
+}
+
+.levelShowmessage {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    font-size: 22px;
+    flex-wrap: wrap;
+}
+
+.small_text {
+    font-size: 16px;
+
+}
+
+.text-muted {
+    color: rgb(0 242 255 / 85%);
+    ;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.backControl {
+    background-color: #037384;
+    border-radius: 12px;
+    padding: 1rem;
+    width: fit-content;
+}
+
+.levelShowmessages {
+    display: flex;
+    justify-content: space-between;
+}

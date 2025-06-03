@@ -8,16 +8,83 @@ use Illuminate\Support\Facades\Session;
 use App\Models\SupportTicket;
 use App\Models\Payment;
 use App\Models\User;
+use App\Models\PromoCode;
 
 class AdminController extends Controller
 {
-    // 1. عرض صفحة تسجيل الدخول
+    // عرض صفحة تسجيل الدخول
     public function showLogin()
     {
         return view('admin.login');
     }
 
-    // 2. معالجة تسجيل الدخول
+    public function showUsers(Request $request)
+{
+    $query = User::query();
+
+    if ($request->has('search') && $request->search != '') {
+        $search = $request->search;
+        $query->where(function ($q) use ($search) {
+            $q->where('username', 'like', "%$search%")
+              ->orWhere('deposit_amount', 'like', "%$search%");
+        });
+    }
+
+     // فلترة الحالة
+     if ($request->filled('status')) {
+        $query->where('status', $request->status);
+    }
+
+    if ($request->date_filter == 'last_7_days') {
+        $query->where('created_at', '>=', now()->subDays(7));
+    } elseif ($request->date_filter == 'this_month') {
+        $query->whereMonth('created_at', now()->month);
+    }
+
+    $users = $query->latest()->paginate(10);
+
+    return view('admin.users', compact('users'));
+}
+
+// تفعيل الحساب
+public function activateUser($telegram_id)
+{
+    // البحث عن المستخدم باستخدام telegram_id
+    $user = User::where('telegram_id', $telegram_id)->firstOrFail();
+
+    // تحديث حالة المستخدم إلى 'active'
+    $user->update(['status' => 'active']);
+
+    return redirect()->route('admin.users')->with('success', 'تم تفعيل الحساب بنجاح.');
+}
+
+// تعطيل الحساب
+public function deactivateUser($telegram_id)
+{
+    // البحث عن المستخدم باستخدام telegram_id
+    $user = User::where('telegram_id', $telegram_id)->firstOrFail();
+
+    // تحديث حالة المستخدم إلى 'disabled'
+    $user->update(['status' => 'disabled']);
+
+    return redirect()->route('admin.users')->with('success', 'تم تعطيل الحساب بنجاح.');
+}
+
+// حذف المستخدم
+public function destroyUser($telegram_id)
+{
+    // البحث عن المستخدم باستخدام telegram_id
+    $user = User::where('telegram_id', $telegram_id)->firstOrFail();
+
+    // حذف المستخدم
+    $user->delete();
+
+    return redirect()->route('admin.users')->with('success', 'تم حذف المستخدم بنجاح.');
+}
+
+
+
+    // معالجة تسجيل الدخول
     public function login(Request $request)
     {
         $request->validate([
@@ -36,17 +103,16 @@ class AdminController extends Controller
         return back()->with('error', 'بيانات الدخول غير صحيحة');
     }
 
-    // 3. تسجيل الخروج
+    // تسجيل الخروج
     public function logout()
     {
         Session::forget('is_admin_logged_in');
         return redirect()->route('admin.login')->with('success', 'تم تسجيل الخروج.');
     }
 
-    // 4. لوحة التحكم الرئيسية
+    // لوحة التحكم الرئيسية
     public function dashboard()
     {
-        // حماية الصفحة
         if (! session('is_admin_logged_in')) {
             return redirect()->route('admin.login')
                              ->with('error', 'يجب تسجيل الدخول أولاً');
@@ -55,7 +121,6 @@ class AdminController extends Controller
         $userCount     = User::count();
         $totalDeposits = Payment::where('status', 'completed')->sum('amount');
         $openTickets   = SupportTicket::whereNull('reply')->latest()->get();
-         // جلب التذاكر المغلقة
         $closedTickets = SupportTicket::whereNotNull('reply')->latest()->get();
 
         return view('admin.dashboard', compact(
@@ -63,47 +128,73 @@ class AdminController extends Controller
             'totalDeposits',
             'openTickets',
             'closedTickets'
-        ));
+      ));
     }
 
-    // 5. صفحة التذاكر المفتوحة
-    public function openTickets()
+        public function showSendMessageForm()
+{
+    if (! session('is_admin_logged_in')) {
+        return redirect()->route('admin.login')->with('error', 'يجب تسجيل الدخول أولاً');
+    }
+
+    return view('admin.send_message');
+}
+
+
+     public function sendMessage(Request $request)
     {
         if (! session('is_admin_logged_in')) {
-            return redirect()->route('admin.login')
-                             ->with('error', 'يجب تسجيل الدخول أولاً');
+            return redirect()->route('admin.login')->with('error', 'يجب تسجيل الدخول أولاً');
         }
 
-        $openTickets   = SupportTicket::whereNull('reply')->latest()->get();
-        return view('admin.open_tickets', compact('openTickets'));
-    }
+        $request->validate([
+            'message' => 'required|string|max:1000',
+            'send_to' => 'required|in:all,depositors',
+            'subject' => 'required|string|max:255',
+        ]);
 
-    // 6. صفحة التذاكر التي تم الرد عليها
-    public function closedTickets()
-    {
-        if (! session('is_admin_logged_in')) {
-            return redirect()->route('admin.login')
-                             ->with('error', 'يجب تسجيل الدخول أولاً');
+        $message = $request->message;
+        $sendTo = $request->send_to;
+         $subject = $request->input('subject');
+
+        if ($sendTo == 'all') {
+            // جلب كل المستخدمين
+            $users = User::all();
+        } else {
+            // جلب المستخدمين الذين لديهم إيداع (مثلاً حقل deposit_amount > 0)
+            $users = User::where('deposit_amount', '>', 0)->get();
         }
 
-        $closedTickets = SupportTicket::whereNotNull('reply')->latest()->get();
-        return view('admin.closed_tickets', compact('closedTickets'));
-    }
+        foreach ($users as $user) {
+            // حفظ رسالة دعم لكل مستخدم
+            SupportTicket::create([
+                'telegram_id' => $user->telegram_id,
+                'subject'     => $subject,  // تأكد من إرسال هذا الحقل
+                'message'     => $message,
+                'reply'       => null,
+            ]);
 
-    // 7. صفحة عرض المستخدمين مع إيداعهم وطاقة التعدين
-    public function showUsers()
-    {
-        if (! session('is_admin_logged_in')) {
-            return redirect()->route('admin.login')
-                             ->with('error', 'يجب تسجيل الدخول أولاً');
+            // إرسال إشعار عبر Telegram (اختياري)
+            $this->sendTelegramMessage($user->telegram_id, "📢 رسالة من الإدارة:\n\n" . $message);
         }
 
-        // نستخدم eager loading لجلب المدفوعات وحساب المجاميع
-        $users = User::with('payments')->get();
-        return view('admin.users', compact('users'));
+        return redirect()->back()->with('success', 'تم إرسال الرسالة بنجاح.');
     }
 
-    // 8. الرد على تذكرة دعم
+
+public function closedTickets()
+{
+    $closedTickets = SupportTicket::whereNotNull('reply')->latest()->paginate(20);
+    return view('admin.closed_tickets', compact('closedTickets'));
+}
+
+public function openTickets()
+{
+    $openTickets = SupportTicket::whereNull('reply')->latest()->paginate(20);
+    return view('admin.open_tickets', compact('openTickets'));
+}
+
+    // الرد على تذكرة دعم
     public function reply(Request $request, $id)
     {
         if (! session('is_admin_logged_in')) {
@@ -136,15 +227,4 @@ class AdminController extends Controller
             'text'    => $message,
         ]);
     }
-
-
-    public function replyToTicket(Request $request, $id)
-{
-    $ticket = SupportTicket::findOrFail($id);
-    $ticket->reply = $request->reply;
-    $ticket->save();
-
-    return back()->with('message', 'تم إرسال الرد على التذكرة.');
-}
-
 }

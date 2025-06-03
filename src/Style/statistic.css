@@ -1,0 +1,69 @@
+ /* S */
+ .statistic {
+     align-items: center;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     text-align: center;
+     margin: 8rem 0 5rem 0;
+ }
+
+ .subTitle {
+     color: #8f9fae;
+     margin-bottom: 2rem;
+ }
+
+ .allCard {
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     text-align: start;
+ }
+
+ .itemStatistic {
+     width: 405px;
+ }
+
+ .titleCards {
+     color: #000000;
+     font-family: 'Source Sans Pro', sans-serif;
+     font-weight: 600;
+     font-size: 22px;
+     margin: .4rem 0 .4rem 0;
+     text-align: start;
+ }
+
+ .titleCards_p {
+     text-align: start;
+
+ }
+
+ .card_Statistic {
+     box-shadow: 3px 3px 8px -1px #076e8d46 !important;
+     /* padding: 0 1rem 1rem 1rem; */
+     background: #fff;
+     display: flex;
+     height: 420px;
+     width: 500px;
+     flex-direction: column;
+     margin: 1rem;
+     align-items: center;
+     justify-content: space-between;
+
+
+ }
+ 
+ .card_Statistic .css-o69gx8-MuiCardMedia-root {
+     width: 100% !important;
+
+ }
+
+ .img-fluid {
+     max-width: 200px;
+ }
+
+ .items {
+     display: flex;
+     flex-direction: column;
+     text-align: end;
+ }

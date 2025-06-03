@@ -1,0 +1,14 @@
+we create muliple folder 
+
+page --- inside thier three page (home , setbyan,events)
+lang ---- put two file translate (ar and en)
+style ---- put all style 
+them --- make file style to control direction in all projects
+asset ---- put all images
+
+component --- we make multiple folder component for all pages
+
+component ------- home component put multiple file section  (about , introduction , contactus , service ,Statistic)
+          ------- setbyan component put multiple file section  (about , introduction , Benefit , serviceEstbyan )
+          ------- events component put multiple file section  (about , introduction , contactus , service ,Objective Section)
+          -------- utilty (share component like header and footer)

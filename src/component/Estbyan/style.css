@@ -1,0 +1,282 @@
+.intro {
+    width: 100%;
+     height: 88vh;
+ }
+
+.introContent {
+    display: flex;
+    padding-top: 3rem;
+    justify-content: space-between;
+
+}
+
+.introDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.platform {
+    border-radius: 12px;
+    border: 2px solid #047083;
+    padding: .4rem;
+    width: 200px;
+    box-shadow: 0px 2px 15px #0000001a;
+    margin: 2rem 0;
+    text-align: center;
+    font-weight: bolder;
+    align-items: center;
+    background-color: #fff;
+}
+
+.circel {
+    width: 22px;
+    height: 22px;
+    margin: .5rem;
+    border-radius: 50%;
+    background-color: #047083;
+}
+
+.textDetails {
+    color: #047083;
+    font-size: 14px;
+}
+
+.see_more {
+    width: 200px;
+    border: none !important;
+}
+
+.textLeft {
+    display: flex;
+    flex-direction: column;
+    text-wrap: wrap;
+    margin-top: .5rem;
+
+}
+
+.clients {
+    line-height: 50px;
+    margin-bottom: 20px;
+    text-wrap: wrap;
+    font-size: 63px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+
+
+.smallText {
+    max-width: 550px;
+    text-wrap: wrap;
+}
+
+.btnWatchVideos {
+    border-radius: 12px;
+    border: 1px solid #047083;
+    padding: .5rem;
+    box-shadow: 0px 2px 15px #0000001a;
+    text-align: center;
+    align-items: center;
+    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.iconVideo {
+    font-size: 22px;
+    color: #047083;
+}
+
+.btnWatchVideo {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 .5rem 0 .5rem;
+
+}
+
+.action_intro {
+    display: flex;
+}
+
+.btnWatchVideos:hover {
+    background: #047083;
+    color: white;
+}
+
+.mar {
+    margin: 0 .4rem;
+}
+
+/*End Card Style */
+
+.SectionTest {
+    align-items: center;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.textDetailss {
+    width: 100%;
+    padding-top: 2rem;
+}
+
+.ColoText {
+    color: #047083;
+    line-height: 50px;
+    letter-spacing: 3px;
+    font-size: 66px;
+    margin: 0 .4rem;
+    font-weight: bolder;
+
+}
+
+
+.about__title_clients {
+    line-height: 50px;
+    margin-bottom: 20px;
+    text-wrap: wrap;
+    display: flex;
+    font-size: 58px;
+    font-weight: bolder;
+    text-wrap: wrap;
+    letter-spacing: 3px;
+}
+
+.about__title_client {
+    line-height: 50px;
+    margin-bottom: 20px;
+    text-wrap: wrap;
+    display: flex;
+    font-size: 59px;
+    font-weight: bolder;
+    text-wrap: wrap;
+    letter-spacing: 3px;
+}
+
+.BorderLeft {
+    border-left: 8px solid #047083;
+    text-align: start;
+    width: 600px;
+    box-shadow: 0px 2px 15px #0000001a;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin: 3rem 0;
+    background-color: white;
+    padding: 1rem;
+}
+
+.show {
+    width: 200px;
+    border-color: #f5005a;
+}
+
+.ShowIcon {
+    color: #f5005ab8;
+}
+
+.contactLogods {
+    width: 600px;
+    margin: -3rem;
+}
+
+
+/* start estbyan services */
+.all_Box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 5rem 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.all_Box__p {
+    margin-bottom: 4rem !important;
+}
+
+.all_Boxs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.boxEstbyan {
+    height: 230px;
+    padding: 1rem;
+    border-radius: 12px;
+    background: #fff;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: 0px 2px 15px #ec09af41;
+    width: 400px;
+    text-align: start;
+    align-items: center;
+}
+
+.boxEstbyanLogo {
+    width: 100px;
+    margin-bottom: .5rem;
+}
+
+.ServieEstbyanItem {
+    margin: 8rem 0;
+}
+
+.Boxuniqs {
+    min-height: 220px !important;
+    line-height: 3rem;
+}
+
+/* start allBenefit style */
+.allBenefit {
+    display: flex;
+    justify-content: space-between;
+    margin: 8rem 0;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.allCardBenefit {
+    display: flex;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.benegitText {
+    font-size: 60px !important;
+}
+
+.BenefitItems {
+    width: 400px;
+    height: 350px;
+    border-radius: 12px;
+    border-top: 5px solid #f5005a;
+    background-color: #fff;
+    display: flex;
+    margin-bottom: 2rem;
+    flex-direction: column;
+
+    box-shadow: 0px 2px 15px #0000001a;
+    padding: 1rem;
+    /* justify-content: space-between; */
+    align-items: center;
+
+}
+
+.imageBenefit {
+    width: 200px;
+    height: 230px;
+}

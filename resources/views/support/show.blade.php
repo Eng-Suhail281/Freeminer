@@ -1,24 +1,32 @@
 @extends('layouts.app')
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/supoort.css') }}"></link>
 
+  @endpush
 @section('content')
-<div class="container mt-5">
-    <h2>{{ $ticket->subject }}</h2>
+<div class="allmessfes">
+    <h1>{{ $ticket->subject }}</h1>
     <hr>
-
-    <div class="mb-4">
+    <div class="levelShowmessage">
         <h5>Your Message:</h5>
-        <p>{{ $ticket->message }}</p>
+        <p class="small_text">{{ $ticket->message }}</p>
     </div>
-
     @if($ticket->reply)
-        <div class="alert alert-success">
-            <strong>Admin Reply:</strong><br>
-            {{ $ticket->reply }}
+        <div class="levelShowmessage">
+            <h5>Admin Reply:</h5>
+         <p class="small_text">{{ $ticket->reply }}</p>
         </div>
     @else
+     <div class="levelShowmessage">
+            <h5>Admin Reply:</h5>
         <p class="text-muted">No reply yet.</p>
-    @endif
 
-    <a href="{{ route('support.index') }}" class="btn btn-secondary mt-3">Back to Tickets</a>
-</div>
+        </div>
+     @endif
+   <div class="levelShowmessages">
+            <h5> </h5>
+     <a href="{{ route('support.index') }}" class="backControl">Back to Tickets</a>
+
+        </div>
+ </div>
 @endsection

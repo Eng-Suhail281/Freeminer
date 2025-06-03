@@ -1,0 +1,287 @@
+{
+  "en": {
+    "translation": {
+      "Location": "Location",
+      "GET IN TOUCH  ": "GET IN TOUCH",
+      "Oman, Muscat, Al Koud Mzoon street": "Oman, Muscat, Al Koud Mzoon street",
+      "Email": "Email",
+      "Call": "Call",
+      "Contact Us": "Contact Us",
+      "Statistics ": "Statistics & Indicators",
+      "TextStatistics": "In this section, statistics and some indicators can be seen easily.  ",
+      "Services": "Our Services",
+      "About": "About Us",
+      "DATA": "DATA MINING (DM)",
+      "Mining": "Data Mining is an Omani active partner in enhancing economic and social development of the Sultanate through the provision of qualitative and quantitative studies and research. Data Mining provides different kinds of information technology solutions according to the various international standards and methodologies.",
+      "Video": "Watch Video",
+      "Started": "Get Started",
+      "Objectives": "Objectives",
+      "Mission": "Mission",
+      "Home": "Home",
+      "Event": "Events Platform",
+      "PlatformEvents": "منصة فعاليات",
+      "AboutHeader": "About",
+      "Through": "Through Events",
+      "Empowering": "Empowering Progress",
+      "ServicesHeader": "Services",
+      "Indicators": "Statistics & Indicators",
+      "EstebyanHeader": "Estebyan",
+      "ContactHeader": "Contact",
+      "Vision": "Vision",
+      "Name": "Name",
+      "TitleService": "Service request from Data Mining",
+      "Email address": "Email address",
+      "Phone Number": "Phone Number",
+      "Kind of Service": "Kind of Service",
+      "TitleForm": "Contact Data Mining",
+      "submitSerive": "Service",
+      "submitContact": "Contact Us",
+      "Omani": "Omani active partner",
+      "Omanis": "with standards methodologies",
+      "TextActionVesions": "To be the first choice for managing and organizing events in the region by providing an integrated technology that contributes to improving the user experience and increasing the effectiveness of organizational processes.",
+      "TextActionMission": "We seek to enable companies and organizers to organize successful and distinguished events by providing innovative and flexible technical solutions that support all stages of the event from registration to final reports",
+      "ActionObjective": [
+        {
+          "id": 1,
+          "name": "Improving User Experience",
+          "role": "colorBack",
+          "text": "Providing an easy-to-use user interface that supports both Arabic and English to ensure convenient access for all users "
+        },
+        {
+          "id": 2,
+          "name": "Enhancing Flexibility",
+          "role": "reds",
+          "text": "Providing flexible tools for managing events including manual registration, payment integration and alert notifications "
+        },
+        {
+          "id": 3,
+          "name": "Supporting Growth",
+          "role": "greens",
+          "text": "Help companies and organizers expand their events through advanced features such as polls, ratings and integration with social media "
+        },
+        {
+          "id": 4,
+          "name": "Providing comprehensive solutions",
+          "role": "blus",
+          "text": "Providing everything needed to manage events from printing cards and tickets, to managing logistics and volunteers"
+        },
+        {
+          "id": 5,
+          "name": "Ensuring Safety and Quality",
+          "role": "yllow",
+          "text": "Providing reliable and secure services with continuous quality and safety tests to ensure the highest levels of performance "
+        }
+      ],
+      "Create": "Create and manage events",
+      "CreateObj": [
+        " Easy interface to create and edit event details (date, time,  location, description",
+        "Assign different types of tickets and packages to participants.",
+        "Customizable registration forms to collect participant information."
+      ],
+      "ReportsAnd": "Reports and analytics",
+      "ReportsAndList": [
+        "Detailed reports (registrations, attendance, revenues, amounts due",
+        "Event performance analytics and feedback",
+        "Data analysis to identify trends and improve future events."
+      ],
+      "Planning": "Planning and scheduling",
+      "PlanningList": [
+        "Create detailed schedules and assign activities and tasks",
+        "View schedule and send alerts to participants of changes"
+      ],
+      "Manage": "Manage registrations and attendance",
+      "ManageList": [
+        "Register attendees, confirm attendance, and check-in",
+        "Assign tickets and provide electronic payment options",
+        "Track participant attendance in different sessions and activities"
+      ],
+      "resources": "Manage resources and location",
+      "resourcesList": [
+        "Book resources (halls, equipment, facilities) and track  their status.",
+        "Plan space and create interactive maps of the location",
+        "Manage room capacity and assign branding"
+      ],
+      "volunteers": "Manage participants and volunteers",
+      "volunteersList": [
+        "Database of participants and volunteers (contact  information, preferences, tasks",
+        "Track volunteer working hours and performance"
+      ],
+      "Add": "Add",
+      "AddList": [
+        "Payment integration and payment tracking",
+        "Document management (upload, store, share)",
+        " Mobile app for participants (event details, updates, ticket scanning)",
+        " Customize the system interface to match the organizer’sbrand"
+      ],
+      "see": "See more",
+      "Messages": "Message",
+      "Message": "Message",
+      "Date": "Date",
+      "subject": "Subject",
+      "Submit": "Submit",
+      "VisionText": "Conducting field surveys (phone calls) through the company's call center and providing various types of information technology solutions inside and outside the Sultanate of Oman in accordance with international standards and methodologies.",
+      "MissionText": "Preparing economic and social studies and research, employing data to support decision-making, playing a major role in the field of programming, designing databases and providing software solutions in a way that contributes to achieving the vision of the Sultanate of Oman towards enhancing economic performance, diversifying sources of income and advancing comprehensive development.",
+      "ObjectivesList": [
+        "To prepare field surveys for various sectors at the governmental and private sector levels.        ",
+        "To Conduct economic and social studies, research and consultancy.        ",
+        "To Prepare strategic plans and to develop indicators in order to measure efficiency and effectiveness",
+        "To implement specialized training programs in the field of statistics and economy",
+        "To create and implement databases and web pages.",
+        "To design programming software."
+      ],
+      "Estebian Platform": "Estebian Platform",
+      "Platform": "منصة استبيان",
+      "Estebyan": "Estebyan",
+      "Provide": "We Provide Our",
+      "Best": "Best",
+      "Choose": "Choose",
+      "The": "The Best",
+      "IT": "Survey",
+      "Business": "Electronic Blatform",
+      "World": "World",
+      "Events": "Events",
+      "AboutEvents": " We are a team specialized in providing innovative technology solutions for event management.  We always strive to provide the best services to our customers through the “My Events Platform”, which combines ease of use and full integration with various systems to ensure an outstanding experience for all users.",
+      "EstebyanAbout": "In order to contribute to the Sultanate’s efforts towards electronic transformation and to be the leading Omani company in providing design and implementation services for electronic data collection systems, the idea came from the Data Mining Company for Economic and Social Studies and Research (Data Mining) to create an Omani platform specialized in collecting various data called “electronic survey platform” (Estebyan), this platform simplifies data collection and descriptive data analysis, in order to help users understand data trends and build on them in making decisions.    ",
+      "What Is ESTEBYAN": "What Is ESTEBYAN Platform?  ",
+      "What": "The “Estebyan” platform is based on finding the necessary support in the process of collecting quantitative and qualitative data, by creating the questionnaire according to the type of data, as it contains different types of questions according to the data to be collected, and based on the type of questions that need to be obtained from various sources.The platform also has several characteristics, including descriptive analysis through various graphs, frequency tables and complex tablesin which the number of variables exceeds two variables, and thus it is a tool for data collection and analysis.  ",
+      "ESTEBYAN Platform": "Data play a pivotal role in making various decisions, and as such it is the necessary tool in supporting planning processes and decision-makers, and it is the main part in setting development plans and achieving sustainable development in all sectors.    ",
+      "CharacteristicsESTEBYAN": "Characteristics of ESTEBYAN Platform",
+      "introductionEvents": " It is a leading and integrated platform for managing and organizing events and exhibitions.  It was founded with the aim of meeting the growing needs of companies and organizers looking for modern and effective technology tools to manage all aspects of an event.  Our platform combines advanced technology and ease of use to provide a unique and distinguished experience for visitors and participants alike.  The “Events Platform” is distinguished by its full support for the Arabic and English languages, ensuring broad and comprehensive access to all users in the region.  We are committed to providing integrated solutions covering all stages of event organization, starting with registration",
+      "Characteristics ESTEBYAN": [
+        "Use more than one language",
+        "Ease of use and it is not a requirement that the user must be a specialist in software, statistics, or other related sciences and disciplines.",
+        "Collect data through a link, and data collection can be controlled to ensure its accuracy and credibility",
+        "The existence of a follow-up panel or dashboard, in order to follow up the response first-hand, and then direct the concerned parties to follow-up data collection towards a number of procedures to ensure the collection of data from the various respondents to the questionnaire according to the chosen sample",
+        "Conduct descriptive analysis with graphs and tables.",
+        "Create questionnaires for multiple data ",
+        "Convert raw data into an Excel or SPSS software package"
+      ],
+      "explor": "Explor Event",
+      "benefit ESTEBYAN": "The benefit of using ESTEBYAN platform?  ",
+      "benefit ESTEBYAN Title": "Here are several benefits that the entity will gain from using “Estebyan” platform, including:    ",
+      "benefit": [
+        {
+          "role": "one",
+          "text": "Enabling the entity’s employees to use technology in accordance with the directions of Oman Vision 2040. ",
+          "image": ".././asset/Connected world-bro.png"
+        },
+        {
+          "role": "two",
+          "text": "Collecting data electronically for surveys and studies carried out to facilitate taking various decisions",
+          "image": ".././asset/19948929_6162910.jpg"
+        },
+        {
+          "role": "three",
+          "text": "Enabling specialists to conduct a Meta-Analysis, which will help in understanding the economic and social patterns.",
+          "image": ".././asset/Company-bro.png"
+        },
+        {
+          "role": "four",
+          "text": "The ability to retrieve data at any time in an excel format and conduct comparative studies to support decision-making.",
+          "image": ".././asset/Business Plan-amico.png"
+        },
+        {
+          "role": "five",
+          "text": "Speed in conducting opinion polls in record time, which will support timely decision-making.",
+          "image": ".././asset/At the office-cuate.png"
+        },
+        {
+          "role": "six",
+          "text": "Supporting small and medium enterprises to contribute to the Omani economy and provide job opportunities for Omanis.",
+          "image": ".././asset/At the office-amico.png"
+        }
+      ],
+      "StatisticsData": [
+        {
+          "role": "one",
+          "title": "Deficit Percentage of GDP in Current Price          ",
+          "text": "The graph is showing deficit percentage of GDP in current price between 2010 and 2021. You can measure the variation of price w.r.t deficit of GDP",
+          "images": ".././asset/Investment_Expenditure.jpg"
+        },
+        {
+          "role": "two",
+          "title": "Investment Expenditure and Oil Price",
+          "text": "The line graph is showing the amount of the money invested as an expenditure and the crude oil price is fluctuated with dramatic change between since 2010 to 2021.",
+          "images": ".././asset/Investment_Expenditure.jpg"
+        },
+        {
+          "role": "three",
+          "title": "Omani Merchandise Exports",
+          "text": "The graph is comparing the Price in GDP and Petroleum activities since 2010 to 2021. The price of petroleum activities was remains the constant. The amount of GDP was increased gradually during the mention time.",
+          "images": ".././asset/Investment_Expenditure.jpg"
+        }
+      ],
+      "ServicesList": [
+        {
+          "title": "FIELD SURVEYS",
+          "text": "Among the services provided by Data Mining Company is conducting field surveys through the following:Going to the field and conducting personal interviews.Using the company's call center to communicate with the study sample and collect data.Using Estebyan platform which is developed by Data Mining to collect data",
+          "image": ".././asset/services-2.png",
+          "class": "reversee"
+        },
+        {
+          "title": "STRATEGIC PLANNING",
+          "text": "The company develops strategic plans that would provide solutions to some phenomena. And thus contribute to improve some services and enhances their quality and efficiency.",
+          "image": ".././asset/services-6.png",
+          "class": "card_service_Home"
+        },
+        {
+          "title": "ECONOMIC & SOCIAL STUDIES",
+          "text": "Conducting economic and social studies, through the administrative data available in the databases of Data Mining Company, in addition to the administrative data obtained from the parties that are dealt with. And come up with applicable economic and social studies",
+          "image": ".././asset/services-3.png",
+          "class": "reversee"
+        },
+        {
+          "title": "DATA ANALYSIS",
+          "text": "Data analysis is the basis on which Data Mining relies in preparing its various reports. In fact, the company has skilled employees related to data analysis, also they are using technology in reaching results and building indicators, and thus relying on the analysis of raw data and historical data in formulating recommendations that contribute to finding applicable solutions.",
+          "image": ".././asset/services-2.png",
+          "class": "reversee"
+        },
+        {
+          "title": "PROGRAMMING & SOFTWARE DEVELOPMENT",
+          "text": "The company offers various software solutions, through a team specialized in developing computer programs. The company is also developing its own computer products that it needs to carry out its business.",
+          "image": ".././asset/services-5.png",
+          "class": "card_service_Home"
+        },
+        {
+          "title": "CALL CENTER",
+          "text": "Through the call center, the company provides data collection services by making phone calls through well trained team to conduct phone calls and collect various data, according to opinion polls requested by the authorities. In addition to that, the call center is linked to Estebyan platform, where the results of the data can be followed up. Also, there a live dashboard where the team can follow the data directly. ",
+          "image": ".././asset/services-4.png",
+          "class": "reversee"
+        }
+      ],
+      "TextData-Driven": "Using Estebyan Platform, You Can Link More Than One Form To Obtain Accurate And Reliable Data. Data With Verification Commands Helps In Professional Decision-Making. It Is One Of The Tools That Distinguishes The Estebyan Platform.",
+      "Questionnaires": "A Platform For Conducting Surveys And Building Questionnaires",
+      "TextQuestionnaires": "Sign Up With Us Today And Build Surveys Customized To Your Needs. Add Your Questions, Format Your Layout, Add Logic & Validations And Brand Your Survey (Logo). Collect Data Professionally. Choose From Over 100 Features And Pre-Built Templates.",
+      "Featuress": "Special Characteristics And Features",
+      "TextFeaturess": "The Estebyan Platform Contains Many Special Characteristics That Contribute To Raising The Efficiency Of The Data By Setting Many Verification Standards And Building Special Mathematical Equations According To The Desire Of The Platform User.",
+      "ListAlllDataEstba": [
+        {
+          "text": "Use more than one language",
+          "image": ".././asset/translation_8377496.png"
+        },
+        {
+          "text": "Ease of use and it is not a requirement that the user must be a specialist in software, statistics, or other related sciences and disciplines",
+          "image": ".././asset/statistics_1012216.png"
+        },
+        {
+          "text": "Collect data through a link, and data collection can be controlled to ensure its accuracy and credibility",
+          "image": ".././asset/evaluation_9912316.png"
+        },
+        {
+          "text": "Conduct descriptive analysis with graphs and tables.",
+          "image": ".././asset/file_3219735.png"
+        },
+        {
+          "text": "Create questionnaires for multiple data",
+          "image": ".././asset/xls_12189737.png"
+        },
+        {
+          "text": "Convert raw data into an Excel or SPSS software package",
+          "image": ".././asset/file_3219735.png"
+        }
+      ],
+      "existence": "The existence of a follow-up panel or dashboard, in order to follow up the response first-hand, and then direct the concerned parties to follow-up data collection towards a number of procedures to ensure the collection of data from the various respondents to the questionnaire according to the chosen sample.",
+      "Characteristics": "Our Characteristics"
+    }
+  }
+}

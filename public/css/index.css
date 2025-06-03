@@ -1,0 +1,564 @@
+.shear_Class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background: black;
+}
+/* style mainr page */
+.back_min_miner {
+    background-image: linear-gradient(to bottom, rgb(11, 11, 11) 10%, rgb(109 158 192));
+    max-width: 100%;
+    position: relative;
+    width: 430px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.main_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.loading_screen {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    margin: 6rem auto;
+
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid blue;
+
+    margin-top: 4rem;
+    border-right: 16px solid green;
+    border-bottom: 16px solid red;
+    border-left: 16px solid pink;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.min_miner {
+    /* width: 500px; */
+    margin: auto;
+}
+
+/* end style mainr page */
+
+
+/* style FAQ page */
+.title_Page {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.faq {
+    padding: 2rem;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 4rem;
+    overflow: auto;
+    scrollbar-color: rgb(109 158 192) rgb(55, 55, 55);
+    justify-content: space-between !important;
+}
+
+.Faq_cntent {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    width: 100%;
+    align-items: start;
+}
+
+.sub_title_Page {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+/* style support page */
+.form_support {
+    padding: 1rem;
+    width: 100%;
+}
+
+.Subject {
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.inputForm {
+    width: 100%;
+    height: 55px;
+    outline: none;
+    border-radius: 5px;
+    border: 0;
+    font-size: 22px;
+    margin: .5rem 0;
+}
+
+.message {
+    width: 100%;
+    height: 105px;
+    outline: none;
+    font-size: 22px;
+
+    border-radius: 5px;
+    border: none;
+    margin: .5rem 0;
+
+}
+
+.Send_button {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    height: 44px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(65, 143, 199);
+}
+
+/* end style support page */
+/*  start style pay page */
+.detailBlock {
+    min-height: 100px;
+    display: flex;
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 2px 2px 2px rgb(206, 228, 235);
+    margin: 2rem auto;
+    width: fit-content;
+    justify-content: space-between;
+    text-wrap: wrap;
+    background-color: rgb(4, 105, 105);
+}
+
+.block {
+    display: block;
+    padding: 1rem;
+
+}
+
+.TITLE_ONE {
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    line-height: 1;
+}
+
+.detailBlock p {
+    align-items: center;
+    padding: .3rem;
+    display: flex;
+}
+
+.more_details {
+    background-color: #f1e7e7;
+    border: none;
+    color: black;
+    padding: .5rem;
+    min-width: 150px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.Card_cntent {
+    display: flex;
+    flex-direction: column;
+     margin: 1rem;
+    overflow-y: auto;
+    margin-bottom: 4rem;
+    min-height: 75vh;
+    line-height: 2;
+    scrollbar-color: rgb(109 158 192) rgb(24, 22, 22);
+    height: 100%;
+}
+
+.withdraw-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card_coin {
+    padding: .8rem;
+    display: flex;
+    color: black;
+    background: rgb(242, 247, 242);
+    margin: 1rem;
+    width: 160px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.TRON {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.card_coin span {
+    color: black;
+}
+
+/*  end style pay page */
+
+
+/* start style tasks */
+
+.content_invites {
+    overflow-y: auto;
+    scrollbar-color: rgb(109 158 192) rgb(24, 22, 22);
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+}
+
+.content_invite_h2 {
+    line-height: 2;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    align-items: center;
+}
+
+
+.content_h2 {
+    margin: 1.5rem 0;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    flex-direction: column;
+
+}
+
+.tasks {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress_content {
+    display: flex;
+    padding: 0 .5rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.count_number,
+.numTasks {
+    margin-left: .5rem;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.task_card {
+    width: 180px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 2px 2px rgb(235, 244, 247);
+
+    margin: 1rem;
+    border-radius: 5px;
+    background-color: #2b2828;
+    align-items: center;
+    position: relative;
+}
+
+.telg {
+    position: absolute;
+    border-radius: 50%;
+    height: 60px;
+    border: 5px solid #3798ec;
+    width: 60px;
+    bottom: 80%;
+}
+
+.text_task {
+    padding: 1rem 0 0 0;
+    text-align: justify;
+}
+
+.textInvite {
+    line-height: 2;
+    font-size: 18px;
+
+}
+
+.reward {
+    line-height: 2;
+    font-size: 13px;
+    color: #eee;
+}
+
+.AllBONUS_CARD {
+    display: flex;
+    flex-direction: column;
+}
+
+.dis_Boun {
+    display: flex;
+    align-items: center;
+    flex-direction: start;
+}
+
+.BONUS_CARD {
+    border-radius: 22PX;
+    background: #3c3b3b;
+    padding: 1rem;
+    margin: 0rem auto .5rem auto;
+    width: 92%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.BONUS_CARD.Follow {
+    padding: .3rem !important;
+}
+
+.flag-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 .5rem;
+}
+
+.iconSizes {
+    font-size: 28px;
+}
+
+.text_tasks {
+    margin-left: .5rem;
+    text-align: justify;
+}
+
+.textInvites {
+    font-size: 16px;
+
+}
+
+.rewards {
+    font-size: 13px;
+    color: #eee;
+}
+
+.all_button {
+    display: flex;
+    align-items: center;
+}
+
+.Open {
+    border: none;
+    background: rgb(14, 155, 206);
+    border-radius: 22px;
+    height: 44px;
+    color: white;
+    width: 55px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.Check {
+    height: 44px;
+    width: 55px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+
+    border: none;
+    border-radius: 22px;
+    background: rgb(44 153 44);
+    margin: .5rem;
+}
+
+/* end style tasks */
+/* start style transactions */
+
+.records {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.images {
+    font-size: 133px;
+
+}
+
+.no_record {
+    font-size: 28px;
+    line-height: 2;
+    font-weight: bold;
+}
+
+.all_content_table {
+    width: 100%;
+    margin: auto;
+    margin: 1rem 0 0 0;
+    /* overflow-y: scroll;
+    scrollbar-color: rgb(109 158 192) rgb(24, 22, 22); */
+}
+
+.table-responsive h1 {
+    line-height: 3;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    margin: 0 1rem 6rem 1rem;
+    border: 2px solid;
+    align-items: center;
+    background-color: #3c729b;
+}
+
+thead {
+    padding: 1rem 0;
+}
+
+.table-dark,
+tr {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 400;
+
+}
+
+tbody {
+    width: 100%;
+    align-items: center;
+}
+
+th {
+    padding: 0 .2rem;
+    font-size: 16px;
+
+}
+
+td {
+    color: #000;
+    background: #9dc2e3;
+    display: flex;
+    align-items: center;
+    margin: .5rem 0;
+    font-size: 14px;
+    padding: 1rem 0;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.th:hover {
+    background: pink;
+}
+
+/* end style transactions */
+/* start style model */
+/* .w3-container,
+.w3-modal-content {
+    padding: 1rem !important;
+    width: 400px !important;
+}
+
+.w3-container,
+.w3-panel {
+    padding: 0.01em 16px;
+    color: black;
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.w3-display-topright {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #47adc5;
+    border-radius: 50%;
+}
+
+.w3-modal-content {
+    width: 400px;
+}
+
+.OKButton {
+    width: 300px !important;
+}
+*/
+#id01 {
+    display: none;
+}
+
+/* end style model */
+
+.content_Finner {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 2rem;
+}

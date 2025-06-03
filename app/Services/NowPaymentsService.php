@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class NowPaymentsService
 {
@@ -12,27 +13,35 @@ class NowPaymentsService
     public function __construct()
     {
         $this->apiKey = env('NOWPAYMENTS_API_KEY');
-
     }
 
-    /**
-     * Create a payout (withdraw) request.
-     *
-     * @param  float   $amount
-     * @param  string  $currency  e.g. "TRON", "BNB"
-     * @param  string  $address
-     * @return array
-     */
-    public function createPayout(float $amount, string $currency, string $address): array
-    {
+
+    public function createPayout(float $amount, string $currency, string $address): ?array
+{
+    $url = rtrim($this->baseUrl, '/') . '/payout';
+    $payload = [
+        'payout_address' => $address,
+        'payout_currency' => $currency,
+        'amount' => $amount,
+    ];
+
+    try {
         $response = Http::withHeaders([
-            'x-api-key' => $this->apiKey,
-        ])->post("{$this->baseUrl}/payout", [
-            'amount'  => $amount,
-            'currency'=> strtoupper($currency),
-            'address' => $address,
-        ]);
+            'Authorization' => 'Bearer ' . $this->apiKey,
+            'Content-Type'  => 'application/json',
+        ])->post($url, $payload);
+
+        $response->throw();
 
         return $response->json();
+    } catch (\Exception $e) {
+        Log::error('NowPayments Payout Error', [
+            'method'  => 'createPayout',
+            'error'   => $e->getMessage(),
+            'payload' => $payload,
+        ]);
+        return null;
     }
+}
+
 }

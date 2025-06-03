@@ -1,0 +1,71 @@
+.ContactUs {
+    text-align: center;
+    margin: 5rem 0;
+
+}
+
+
+.title {
+    color: #000000;
+    font-size: 48px;
+    font-weight: 500;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.contactCards {
+    box-shadow: 0px 2px 15px #0000001a;
+    padding: 2rem;
+    max-width: 100%;
+    width: 500px;
+    flex-direction: column;
+    margin: 1rem;
+    border-bottom: 8px solid #0ea2bd;
+    display: flex;
+}
+
+.textForm {
+    text-align: start;
+}
+
+.iconCard {
+    color: #0ea2bd;
+    font-size: 28px;
+    width: 38px;
+}
+
+.textContact {
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    margin: .8rem;
+}
+
+.itemContent {
+    display: flex;
+    align-items: center;
+}
+
+.textContact_Title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #485664;
+}
+
+.detalsLocation {
+    color: #8f9fae;
+}
+
+.AllContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contactLogo {
+    width: 430px;
+}
+
+.contact_Us_Logo {
+    width: 630px;
+    height: 600px;
+}

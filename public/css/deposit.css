@@ -1,130 +1,184 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
-    color: white;
+.disposite_content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+    margin-top: 1rem 0;
     align-items: center;
-    height: 100vh;
-    margin: 0;
 }
 
-.container {
-    width: 360px;
-    padding: 20px;
-    background-color: #2c2c2c;
-    border-radius: 10px;
-}
-
-.header {
+.cardfirst {
+    padding: 1rem;
+    width: 95%;
     display: flex;
     justify-content: space-between;
+    margin: auto;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
     align-items: center;
-    padding-bottom: 20px;
+    background-color: #3c729b;
+
 }
 
-.deposit-button {
-    background-color: #ff7f50;
-    padding: 10px 20px;
-    border: none;
-    color: white;
-    font-size: 14px;
-    border-radius: 5px;
+.ChoosePay {
+    line-height: 2;
+    font-size: 22px;
+    color: green;
+}
+
+select#method {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 14px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #333;
     cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.balance {
-    font-size: 14px;
+select#method:focus {
+    border-color: #3b82f6;
+    /* blue */
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+    outline: none;
 }
 
-.power-sale {
-    background-color: #333;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+select#method option {
+    background-color: white;
+    color: #333;
+}
+
+/* Optional: Add custom arrow icon */
+select#method {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23666' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0px center;
+    background-size: 22px;
+}
+
+.some_texts {
+    display: flex;
+    flex-direction: column;
+}
+
+.PowerText {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 2;
+}
+
+.sub_texxt {
+    font-size: 13px;
+}
+
+.some_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: baseline;
+}
+
+.number_usd {
+    border: none;
+    width: 80px;
+    font-size: 22px;
+    padding: .6rem;
+    border-radius: 1px;
+    text-align: center;
+    height: 25px;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.usd {
+    border: 2px solid #fff;
+    padding: .6rem;
+    background: #037384;
+}
+
+
+.Power_Sale {
+    display: flex;
+    flex-direction: column;
+    background: #eef0f3;
+    padding: 1rem;
+    margin: 1rem auto 0 auto;
+    font-weight: bold;
+    color: black;
+    width: 95%;
+    border-right: 8px solid rgb(18 73 111);
+}
+
+.detalis_power {
+    display: flex;
+    line-height: 2;
+    justify-content: space-between;
+}
+
+.hr {
+    margin: 1rem 0;
+}
+
+.Shpos {
+    border-right: none;
+    border-left: 8px solid rgb(18 73 111);
 }
 
 .time-left {
-    font-size: 12px;
-    color: #ff7f50;
-}
-
-.power-shop {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.power-shop input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #666;
-    border-radius: 5px;
-    background-color: #444;
-    color: white;
-}
-
-.profit-calculator {
-    margin-top: 20px;
-}
-
-.pay-button {
-    width: 100%;
-    background-color: #ff7f50;
-    padding: 10px;
-    border: none;
-    color: white;
+    color: green;
     font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
+    list-style: 4;
 }
 
-.next-mining-machine {
-    background-color: #333;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.machine {
+    margin-top: 2rem;
+    width: 95%;
+    align-items: center;
+    justify-content: center;
 }
 
 .unlock-button {
-    background-color: #00b300;
-    padding: 10px 20px;
-    border: none;
-    color: white;
-    font-size: 14px;
-    border-radius: 5px;
+    padding: .8rem;
+    background: #037384;
     cursor: pointer;
-    margin-top: 10px;
-}
-
-.footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.footer .navigation button {
-    background-color: #444;
+    width: 140px;
     color: white;
+    font-size: 15px;
     border: none;
-    padding: 10px;
-    font-size: 12px;
-    border-radius: 5px;
-    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+
 }
 
-.footer-info {
-    font-size: 12px;
-    color: #bbb;
-    text-align: center;
-    margin-top: 10px;
+.select_option {
+    width: 100%;
+}
+
+.doposite_box {
+    padding: 1rem;
+}
+
+.doposit_now {
+    margin: 1rem 0;
+}
+
+.strong_balance {
+    font-weight: bolder;
+    font-size: 20px;
+    color: #07deff;
+}
+.wither_box{
+    /* min-width: 550px; */
+    max-width: fit-content;
 }

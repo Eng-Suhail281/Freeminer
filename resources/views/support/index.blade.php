@@ -1,54 +1,82 @@
 @extends('layouts.app')
 
+@push('styles')
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+ <link rel="stylesheet" href="{{ asset('css/supoort.css') }}"></link>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>  </head>
+
+ <!-- Toastify JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+@endpush
 @section('content')
-<div class="container text-center mt-5">
-    <h1 class="mb-4">Support</h1>
 
-    @if(session('success'))
-        <div style="color: green;">{{ session('success') }}</div>
-    @endif
 
-    <form action="{{ route('support.send') }}" method="POST">
+<div class="btn_support">
+
+    <button class="addMessgeSupport" onclick="document.getElementById('id01').style.display='block'">Write Messge</button>
+     <form id="id01" class="form_support" action="{{ route('support.send') }}" method="POST">
         @csrf
-        <div style="margin-bottom: 20px;">
-            <label>Subject:</label><br>
-            <input type="text" name="subject" style="width: 100%; max-width: 400px;">
+        <div class="Faq_cntent Subject " >
+            <label class="sub_title_Page">Subject:</label>
+            <input type="text" name="subject" value="{{ old('subject') }}" class="inputForm">
         </div>
-        <div style="margin-bottom: 20px;">
-            <label>Message:</label><br>
-            <textarea name="message" rows="4" style="width: 100%; max-width: 400px;"></textarea>
+        <div class="Faq_cntent Subject" >
+            <label class="sub_title_Page">Message:</label>
+            <textarea name="message" rows="4" class="message">{{ old('message') }}</textarea>
         </div>
-        <button type="submit">Send</button>
+        <button type="submit" class="Send_button">SEND</button>
     </form>
-</div>
+    <div class="allcardSupports">
 
-<!-- العنوان في المنتصف -->
-<div class="container mt-5">
-    <h4 class="text-center mb-3">Your Requests</h4>
-
-    <!-- العناوين: Subject / Status -->
-    <div class="d-flex justify-content-between px-2 mb-2" style="font-weight: bold;">
-        <div>Subject</div>
-        <div>Status</div>
-    </div>
-
-    <!-- عرض التذاكر -->
     @foreach($tickets as $ticket)
-        <a href="{{ route('support.show', $ticket->id) }}" class="text-decoration-none text-dark">
-            <div class="card mb-2 shadow-sm">
-                <div class="card-body d-flex justify-content-between align-items-center px-2">
-                    <div>{{ $ticket->subject }}</div>
+
+        <div class="cardSupports">
+         <a href="{{ route('support.show', $ticket->id) }}" class="cardSupports allA">
+                     <div class="textMessg">{{ $ticket->subject }}</div>
                     <div>
                         @if($ticket->reply)
-                            <span class="badge bg-success">Closed</span>
+                            <span class="badges">Show</span>
                         @else
-                            <span class="badge bg-warning text-dark">Open</span>
+                            <span class="badges">Open</span>
                         @endif
                     </div>
-                </div>
+                </a>
+
+             </div>
+
+             @endforeach
             </div>
-        </a>
-    @endforeach
-</div>
+            </div>
+
+@if (session('success'))
+<script>
+  Toastify({
+    text: "{{ session('success') }}",
+    duration: 3000,
+    close: true,
+    gravity: "top",
+    position: "right",
+    backgroundColor: "#4CAF50",
+    stopOnFocus: true,
+  }).showToast();
+</script>
+@endif
+
+
+@if ($errors->any())
+    <script>
+        @foreach ($errors->all() as $error)
+            Toastify({
+                text: "{{ $error }}",
+                duration: 4000,
+                gravity: "top",
+                position: "right",
+                backgroundColor: "#f44336",
+                close: true,
+            }).showToast();
+        @endforeach
+    </script>
+@endif
 
 @endsection

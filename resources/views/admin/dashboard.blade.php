@@ -1,42 +1,57 @@
 @extends('layouts.app')
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/admin.css') }}"></link>
+<link rel="stylesheet" href="{{ asset('css/promoCode.css') }}"></link>
 
+  @endpush
 @section('content')
-<div class="container py-4">
+<div class="create_codess" >
     <h1 class="mb-5 text-center">🛠️ لوحة تحكم الإدارة</h1>
-
-    <div class="row">
-        <div class="col-md-4 mb-3">
-            <div class="card shadow-sm">
-                <div class="card-body text-center">
-                    <h4>عدد المستخدمين</h4>
-                    <p class="fs-1">{{ $userCount }}</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4 mb-3">
-            <div class="card shadow-sm">
-                <div class="card-body text-center">
+    <div class="rowBox">
+         <div class="box_dashboard greens">
+                 <div class="details_box">
                     <h4>إجمالي الإيداع</h4>
-                    <p class="fs-1">{{ $totalDeposits }} FMT</p>
+                    <p class="num textGreen">{{ $totalDeposits }} FMT</p>
                 </div>
-            </div>
-        </div>
+                <div class="box_icons">
+            <i class="bi bi-disc-fill iconSizeBx"></i>
 
-        <div class="col-md-4 mb-3">
-            <div class="card shadow-sm">
-                <div class="card-body text-center">
+            </div>
+         </div>
+         <div class="box_dashboard ">
+                 <div class="details_box">
                     <h4>التذاكر المفتوحة</h4>
-                    <p class="fs-1">{{ $openTickets->count() }}</p>
+                    <p class="num numBlue">{{ $openTickets->count() }} </p>
                 </div>
+                <div class="box_icons numBlues">
+            <i class="bi bi-disc-fill iconSizeBx"></i>
+
             </div>
-        </div>
+         </div>
+
+         <div class="box_dashboard">
+                 <div class="details_box">
+                    <h4>عدد المستخدمين</h4>
+                    <p class="num textRed">{{ $userCount }}</p>
+                </div>
+                <div class="box_icons boxRed">
+            <i class="bi bi-disc-fill iconSizeBx"></i>
+
+            </div>
+         </div>
+
     </div>
 
-    <div class="mt-5">
-        <a href="{{ route('admin.support.open') }}" class="btn btn-warning">عرض الرسائل المفتوحة</a>
-        <a href="{{ route('admin.support.closed') }}" class="btn btn-success">عرض الرسائل التي تم الرد عليها</a>
-        <a href="{{ route('admin.users') }}" class="btn btn-primary">عرض المستخدمين</a>
+    <div class="all_Sahow">
+
+        <a href="{{ route('admin.support.open') }}" class="show_data">عرض الرسائل المفتوحة</a>
+        <a href="{{ route('admin.support.closed') }}" class="show_data">عرض الرسائل التي تم الرد عليها</a>
+        <a href="{{ route('admin.users') }}" class="show_data">عرض المستخدمين</a>
+        <a href="{{ route('admin.promo-codes.index') }}" class="show_data">إدارة Promo Codes</a>
+    <a href="{{ route('admin.send_message_form') }}" class="show_data">إرسال رسالة للمستخدمين</a>
+
+
     </div>
+
 </div>
 @endsection

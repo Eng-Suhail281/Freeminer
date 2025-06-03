@@ -1,0 +1,502 @@
+.introActopn {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+    cursor: pointer;
+    background-color: #f4fbfca8;
+}
+
+.textActions {
+    line-height: 5rem;
+    margin-bottom: 20px;
+    text-wrap: wrap;
+    font-size: 65px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #047083;
+}
+
+
+.lineHight {
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+.Contecnt_container {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.introDetailsAction {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.LogoIntro {
+    width: 500px;
+}
+
+.platforms {
+    width: 200px;
+    font-size: 22px;
+    margin-bottom: 2rem;
+
+}
+
+
+.LetsGo {
+    background-color: #047083 !important;
+    color: white !important;
+    text-decoration: none !important;
+    width: 200px;
+    padding: .8rem !important;
+}
+
+.textLefts {
+    display: flex;
+    flex-direction: column;
+    text-wrap: wrap;
+    margin-top: 1rem;
+
+}
+
+.clientsAction {
+    line-height: 80px;
+    margin-bottom: 20px;
+    text-wrap: wrap;
+    font-size: 63px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+}
+
+.contactLogod {
+    width: 570px;
+    height: 600px;
+    margin: -2rem;
+}
+
+.smallText {
+    max-width: 550px;
+    text-wrap: wrap;
+}
+
+
+
+/* start about style */
+.About {
+    margin: 4rem 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.allDivs {
+    background: #88dbe986;
+    width: 90%;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.BoxAbout {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    border-top-left-radius: 88px;
+    border-bottom-left-radius: 88px;
+    border-top-right-radius: 2px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+
+}
+
+.allDiv {
+    display: flex;
+    margin: 4rem 0;
+    padding: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.imageTimeLine {
+    margin: 0;
+}
+
+.itemServices {
+    background-color: #fff;
+    box-shadow: 0px 2px 15px #0000001a;
+    width: 100%;
+    display: flex;
+    min-height: 500px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    padding: 1rem;
+
+
+}
+
+.Service {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.itemServicesSecand {
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.Coulmus {
+    display: flex;
+    flex-direction: column;
+    margin: 0 .5rem;
+}
+
+.Translate {
+     height: 230px;
+}
+
+.textEvents {
+    width: 70%;
+    text-align: start;
+    line-height: 3rem;
+    text-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.explor {
+    background-color: #047083 !important;
+    border: none !important;
+    font-weight: 600 !important;
+}
+
+
+
+.about__Titles {
+    text-wrap: wrap;
+    display: flex;
+    font-size: 55px;
+    font-weight: bolder;
+    text-wrap: wrap;
+    letter-spacing: 3px;
+}
+
+
+
+.itemServicce {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 2px 15px #0000001a;
+    width: 390px !important;
+    border-radius: 12px;
+    padding: 1rem;
+    flex-wrap: wrap !important;
+    margin: 0 2rem;
+    min-height: 250px !important;
+    cursor: pointer;
+    justify-content: center !important;
+}
+
+.itemServicceText {
+    font-size: 22px;
+    line-height: 2rem;
+    letter-spacing: 0;
+    margin: 1rem 0;
+    color: black;
+    font-weight: bolder;
+}
+
+/* Events Style */
+.itemServicceEvents {
+    width: 100%;
+    height: 100%;
+}
+
+.BoxEvents {
+    padding: 0;
+
+}
+
+.eventText {
+    padding: 1rem;
+    height: 250px;
+}
+
+
+/* start contact us style */
+.contact__events {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0;
+}
+
+.ContactUsEvents {
+    display: flex;
+    flex-direction: column;
+}
+
+.allContactUs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.formContactUs {
+    width: 650px;
+    box-shadow: 0px 2px 15px #0000001a;
+    padding: 3rem 2rem;
+    border-radius: 5px;
+
+}
+
+.contactUSLogo {
+    width: 570px;
+    height: 650px;
+    margin: -3rem;
+}
+
+.LableForm {
+    font-size: 18px;
+    height: 35px;
+}
+
+.inputForm {
+    height: 44px;
+    width: 100%;
+
+}
+
+.allElements {
+    width: 260px;
+
+}
+
+.inputFormArea {
+    height: 100px;
+    width: 100%;
+}
+
+.submitEvent {
+    width: 100%;
+}
+
+.form-check-input:checked {
+    background-color: #dc2626 !important;
+    border-color: #dc2626 !important;
+
+}
+
+.info-timeline ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.info-timeline ul li span.timeline-circle {
+    position: relative;
+    border: 2px solid #999;
+    border-radius: 100%;
+    width: 120px;
+    line-height: 120px;
+    margin-top: -180px;
+    text-align: center;
+    border: 3px solid #035260;
+    background-color: #fff;
+    z-index: 9;
+    display: inline-block;
+}
+
+.info-timeline ul li:not(:first-of-type) span.timeline-circle::before {
+    position: absolute;
+    border: 1px solid #035260;
+    width: 0;
+    height: 230px;
+    display: block;
+    content: '';
+    left: 50%;
+    z-index: 1;
+    top: -230px;
+    margin-left: -1px;
+}
+
+.timeline-circle {
+    color: #000;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.boxTimeLines {
+    background-color: #0ea3bd60;
+    border-radius: 12px;
+    width: 350px;
+    min-height: 180px;
+    margin-left: .5rem;
+    margin-top: -130px;
+    padding: 1rem;
+}
+
+
+.LITIMELINE {
+    display: flex;
+    align-items: center;
+    height: 350px;
+
+    justify-content: center;
+}
+
+.allObjective {
+    display: flex;
+    flex-direction: column;
+}
+
+.objectives {
+    display: flex;
+    margin: 2rem 0;
+    align-items: center;
+}
+
+.colorBack {
+    background-color: #b64811;
+    border-top-left-radius: 55px;
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+
+    width: 90px;
+    position: relative;
+    margin-right: 3rem;
+    z-index: 2;
+    height: 80px;
+}
+
+.reds {
+    background: #0ea2bd;
+    border-top-left-radius: 55px;
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+
+    width: 90px;
+    position: relative;
+    margin-right: 3rem;
+    z-index: 2;
+    height: 80px;
+
+}
+
+.greens {
+    background: #127403;
+    border-top-left-radius: 55px;
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+
+    width: 90px;
+    position: relative;
+    margin-right: 3rem;
+    z-index: 2;
+    height: 80px;
+
+}
+
+.blus {
+    background-color: #b6a311;
+    border-top-left-radius: 55px;
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+
+    width: 90px;
+    position: relative;
+    margin-right: 3rem;
+    z-index: 2;
+    height: 80px;
+
+}
+
+.yllow {
+    background-color: #b6118a;
+    border-top-left-radius: 55px;
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+
+    width: 90px;
+    position: relative;
+    margin-right: 3rem;
+    z-index: 2;
+    height: 80px;
+
+}
+
+.number {
+    margin-top: -4rem;
+    font-weight: bold;
+    z-index: 999;
+    position: absolute;
+    font-size: 66px;
+}
+
+
+
+
+.oneItemOb {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.oneItemOb p {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.secandService {
+    margin: 12rem 0;
+}
+
+.secandServiceImage {
+    width: 500px;
+    height: 500px;
+}
+
+.Boxuniq {
+    width: 100%;
+    min-height: 200px;
+}
+
+.rwos {
+    align-items: center;
+}
+
+.seeMore {
+    border: none !important;
+    background: #b6a311 !important;
+    margin: 2rem 0 !important;
+    font-weight: 500 !important;
+}
+
+.buttons {
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.target {
+    background-color: #035260 !important;
+}

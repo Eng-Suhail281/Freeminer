@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Deposit;
 
 class User extends Authenticatable
 {
@@ -18,7 +19,13 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'telegram_id', 'first_name', 'last_name', 'username', 'photo_url'
+        'telegram_id',
+    'username',
+    'balance',
+    'gpu_power',
+    'hashes',
+     'referred_by', 
+     'referral_code'
     ];
     
 
@@ -45,10 +52,29 @@ class User extends Authenticatable
         ];
     }
 
+    
 
     public function payments()
 {
-    return $this->hasMany(Payment::class, 'user_id' , 'telegram_id');
+    return $this->hasMany(Payment::class, 'user_id' , 'id');
+}
+
+// الكود الذي استخدمه هذا المستخدم
+public function promoCode(): BelongsTo
+{
+    return $this->belongsTo(PromoCode::class, 'promo_code', 'code');
+}
+
+// إذا كان المؤثر، الأكواد التي أنشأها
+public function deposits(): HasMany
+{
+    return $this->hasMany(Deposit::class);
+}
+
+// إذا أردت علاقة سريعة لجلب ما إذا كان المستخدم قد أودع عبر هذا الكود:
+public function promoDeposits()
+{
+    return $this->deposits()->whereNotNull('amount');
 }
 
 }
