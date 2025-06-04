@@ -4,6 +4,7 @@
     line-height: 3;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     text-align: center;
 
 }
@@ -403,9 +404,10 @@
 }
 
 /* finsh open ticket */
-@media (max-width: 280px) {
 
-  .details_promo{
-    flex-direction: column;
-  }
+@media (max-width: 280px) {
+    .details_promo {
+        flex-direction: column;
+        line-height: 2.5;
+    }
 }

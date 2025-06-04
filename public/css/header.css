@@ -240,38 +240,43 @@ a.menu-icon {
     }
 }
 
-@media (max-width: 324px) {
+ 
+    @media (max-width: 384px) {
 
-    .person,
-    .flag-img,
-    .bal_nce {
-        display: none;
-    }
+        .person,
+        .flag-img,
+        .bal_nce {
+            display: none;
+        }
 
-    .search_input {
-        padding: .5rem;
-    }
+        .main_body {
+            width: 100%;
+        }
 
-    .form_input_Search {
-        margin-top: 1rem;
-    }
+        .search_input {
+            padding: .5rem;
+        }
 
-    /* body {
+        .form_input_Search {
+            margin-top: 1rem;
+        }
+
+        /* body {
         background-color: bisque;
     } */
-}
-
-@media (min-width: 628px) and (max-width: 800px) {
-
-    .form_input_Search {
-        display: flex;
     }
 
-    .flex_item {
-        flex-wrap: nowrap;
-    }
+    @media (min-width: 628px) and (max-width: 800px) {
 
-    /* body {
+        .form_input_Search {
+            display: flex;
+        }
+
+        .flex_item {
+            flex-wrap: nowrap;
+        }
+
+        /* body {
         background-color: rgb(0, 200, 255) !important;
     } */
-}
+    }

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="shear_Class faq">
+<div class=" faq">
 <p class="title_Page">Frequently Asked Questions (FAQ)
 </p>
 <div class="Faq_cntent">

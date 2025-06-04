@@ -62,10 +62,11 @@ border-top-right-radius: 40px;  padding: .8rem 0;position: absolute;width: 100%;
 
 <main class="main_body" id="main_body">
     <main class="shear_Class back_min_miner">
-        @include('layouts.header')
-        @yield('content')
+             @include('layouts.header')
+            @yield('content')
 
     </main>
+    @include('layouts.footer')
 </main>
 
 
