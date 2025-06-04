@@ -12,7 +12,7 @@
             <div class="referral-link">
                 <div class="shearLinks">
                     <input type="text" id="referral-link" value="{{ $referral_link }}" class="input_invite" readonly>
-                    <button class="share-btn" onclick="">Shear Link</button>
+                    <!-- <button class="share-btn" onclick="">Shear Link</button> -->
                 </div>
 
                 <button class="share-btn" onclick="copyReferralLink()">Copy link</button>
